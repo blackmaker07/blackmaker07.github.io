@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Leistungen"
+---
+
+<section id="leistungen">
+
+    <h1 class="fw-semibold pt-5">Leistungen im Detail</h1>
+    <p class="lead fw-normal mb-4">Als erfahrene Webdesign-Agentur bieten wir eine Vielzahl von Dienstleistungen an, um
+        sicherzustellen, dass Ihre
+        Online-Präsenz Ihre Vision und Ziele widerspiegelt. Unser engagiertes Team von Designern und Entwicklern
+        arbeitet
+        eng mit Ihnen zusammen, um maßgeschneiderte Lösungen zu entwickeln, die Ihr Unternehmen voranbringen.
+        Nachfolgend
+        finden Sie eine Übersicht unserer Dienstleistungen:
+    </p>
+
+    {% for item in site.data.leistungen.item %}
+    <div class="col">
+
+                    <h2 class="fw-semibold">{{ item.title }}</h2>
+                    <p>{{ item.content }}</p>
+
+    </div>
+    {% endfor %}
+
+
+
+</section>

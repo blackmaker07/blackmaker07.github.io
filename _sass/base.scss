@@ -1,0 +1,356 @@
+@import "functions";
+
+// 2. Include any default variable
+$enable-gradients: true;
+$enable-dark-mode: false;
+
+$primary: #0b3cad;
+$info: #2fc4f7;
+$danger: #e11938;
+$light: #fafafa;
+
+$body-color: #141414;
+$body-bg: #fafafa;
+
+$tooltip-color: $light;
+$tooltip-bg: #040a4d;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "variables";
+@import "variables-dark";
+
+// 4. Include any default map overrides here
+
+
+// 5. Include remainder of required parts
+@import "maps";
+@import "mixins";
+@import "root";
+
+// 6. Optionally include any other parts as needed
+@import "utilities";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "helpers";
+// @import "accordion";
+// @import "alert";
+// @import "badge";
+// @import "breadcrumb";
+// @import "button-group";
+@import "buttons";
+@import "card";
+// @import "carousel";
+@import "close";
+// @import "dropdown";
+@import "forms";
+@import "list-group";
+@import "modal";
+@import "nav";
+@import "navbar";
+// @import "offcanvas";
+// @import "pagination";
+// @import "placeholders";
+// @import "popover";
+// @import "progress";
+// @import "spinners";
+@import "toasts";
+// @import "tables";
+@import "tooltip";
+@import "transitions";
+@import "type";
+
+// 7. Custom-Utilities ( add custom-utilities.scss in _sass )
+// @import "custom-utilities";
+
+// 8. Optionally include utilities API
+@import "utilities/api";
+
+/*
+ * Globals
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 15.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040a4d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $info;
+}
+
+::selection {
+  color: $light;
+  background: $primary;
+}
+
+
+/*
+ * Base structure
+ */
+
+body {
+  background-image: url("/assets/img/bg-gutter.webp");
+  background-repeat: repeat;
+  font-family: 'Open Sans';
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+}
+
+
+
+.form-control {
+  background-color: $white;
+  border: 0;
+  padding: 0.75rem 1rem;
+}
+
+.form-control::placeholder {
+  color: $secondary;
+}
+
+.lead {
+  color: #646464;
+}
+
+
+
+
+
+
+@include media-breakpoint-up(sm) { }
+@include media-breakpoint-up(md) {  }
+@include media-breakpoint-up(lg) {  }
+@include media-breakpoint-up(xl) {  }
+@include media-breakpoint-up(xxl) {  }
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+
+ }
+
+
+
+ // HEADER + MAIN
+
+#header {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+#main {
+  margin-left: 0%;
+  width: 100%;
+}
+
+@include media-breakpoint-up(lg) { 
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    text-align: end;
+  }
+  #main {
+    margin-left: 30%;
+    width: calc(100% - 30%);
+  }
+ }
+
+ @include media-breakpoint-up(xxl) { 
+  #main {
+    margin-left: 30%;
+    width: calc(100% - 40%);
+  }
+}
+
+#header .nav-link {
+  font-size: 1.35rem;
+}
+
+#header .nav-link:hover {
+  font-weight: bold;
+}
+
+
+#header .social-media a {
+  color: $light;
+}
+
+#main hr {
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  margin-top: 4rem;
+}
+
+#main>section:last-of-type {
+  margin-bottom: 0rem;
+}
+
+#footer .social-media a {
+  color: $secondary;
+}
+
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(11,60,173);
+  background: linear-gradient(202deg, rgba(11,60,173,1) 0%, rgba(4,10,77,1) 100%);
+}
+
+.outer-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header-gutter {
+  position:absolute;
+  background-color: transparent;
+  background-image: url("/assets/img/gutter.webp");
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+// CARD
+
+.card {
+  overflow: hidden;
+}
+
+.card-body {
+  z-index: 1;
+}
+
+.card-img-top {
+  transition: transform 1s, filter 1s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(75%);
+  z-index: 0;
+
+}
+
+.card:hover > .card-img-top {
+  filter: brightness(100%);
+  transform: scale(1.3);
+}
+
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.open-sans-400 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+    #cookie-notice {
+        padding: 1.75rem;
+        display: none;
+        position: fixed;
+        left: 40px;
+        bottom: 40px;
+        width: 400px;
+        background: rgba(0,0,0,0.75);
+        color: $light;
+        z-index: 2;
+        border-radius: 0.5rem;
+    }
+
+    #cookie-notice .btn {
+      padding: 0.5rem 1rem;
+      margin: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+
+    }
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    #cookie-notice a {
+        cursor: pointer;
+        margin-left: 0.5rem;
+    }
+
+    @media (max-width: 767px) {
+        #cookie-notice span {
+        }
+
+        #cookie-notice a {
+            position: relative;
+        }
+    }

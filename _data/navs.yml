@@ -1,0 +1,13 @@
+main-nav:
+  - title: Leistungen
+    url: "/index.html#main-intro"
+    disabled: false
+    
+  - title: Referenzen
+    url: "/index.html#main-work"
+    disabled: false
+
+  - title: Kontakt
+    url: "#main-contact"
+    disabled: false
+

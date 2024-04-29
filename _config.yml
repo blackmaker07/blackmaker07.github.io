@@ -1,0 +1,77 @@
+# Meta Daten
+url: # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: # the subpath of your site, e.g. /blog
+title: 
+description: 
+version: v0.1
+lang: de-AT
+
+copyright: © 2024 - Elematic.at
+
+# E-Mails
+email:
+
+# Firma
+company-name:
+company-address: 
+company-city:
+company-country:
+company-fn: FN xxxxx s
+company-uid: ATUxxxxxxxx
+
+# Social Media
+twitter-url: 
+github-url:
+facebook-url: 
+instagram-url:
+
+# Google
+google-tag:
+google-analytics:
+
+# Plugins
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Sass
+sass:
+  style: compressed
+  load_paths:
+    - _sass
+    - vendor/bundle/ruby/3.2.0/gems/bootstrap-5.3.2/assets/stylesheets/bootstrap
+
+# HTML Compress
+compress_html:
+  clippings: []
+  comments: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+# Pagination (index.md -> index.html)
+paginate: 5
+paginate_path: "/blog:num/"
+
+# Archive
+jekyll-archives:
+    enabled: []
+    layout: archive
+    enabled: all
+    enabled:
+        - categories
+    enabled:
+        - year
+        - month
+        - tags
+    permalinks:
+        year: '/:year/'
+        month: '/:year/:month/'
+        day: '/:year/:month/:day/'
+        tag: '/tag/:name/'
+        category: '/category/:name/'

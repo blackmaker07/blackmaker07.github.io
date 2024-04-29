@@ -1,0 +1,44 @@
+<header id="header">
+    <div class="outer-container d-flex align-items-center text-light px-lg-5">
+
+        <!-- Gutter -->
+        <div class="header-gutter"></div>
+        <!-- Particle -->
+        <div id="particles-js"></div>
+
+        <div class="container" style="position: relative;" >
+
+            <a href="/" class="mb-0 text-decoration-none text-light fs-1 lh-1">Elematic</a>
+            <div class="d-flex align-items-center justify-content-lg-end">
+             <img src="/assets/img/split.webp" class="me-2"
+                    alt="square-split" width="40" height="14">
+                    <i class="lead text-light">Webdesign</i>
+                </div>
+
+                <div class="row justify-content-end">
+                <div class="col-12 col-lg-8 ">
+                <p class="lead fs-6 text-white my-3">Elematic.at ist ein Webdesign-Einzelunternehmen aus Wien, spezialisiert auf die
+                    Schaffung von hochperformanten, suchmaschinen - optimierten Websites.</p>
+                </div>
+            </div>
+
+            <ul class="nav flex-column">
+                {% for item in site.data.navs.main-nav %}
+                <li class="nav-item"><a
+                        class="nav-link link-light px-0 {% if page.url contains item.url %} active {% endif %} {% if item.disabled %} disabled {% endif %}"
+                        aria-current="page" {% if item.disabled %} aria-disabled="true" {% endif %}
+                        href="{{ item.url }}">{{
+                        item.title }}</a></li>
+                {% endfor %}
+
+            </ul>
+            <div class="mt-5 mb-3">{% include social-media.html %}</div>
+            <div class="d-none d-lg-block small">{{ site.copyright }}</div>
+    
+            
+    </div>
+
+
+    
+    </div>
+</header>

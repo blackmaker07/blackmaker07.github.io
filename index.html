@@ -1,0 +1,55 @@
+---
+layout: default
+title: "Happy Jekylling!"
+---
+
+
+
+<section id="main-intro">
+    <h1 class="fw-semibold pt-5">Webdesign aus Wien</h1>
+    <p class="lead fw-normal mb-4">Willkommen bei Elematic.at – der Heimat einzigartiger, leistungsstarker Websites,
+        die mit Leidenschaft aus Wien gestaltet und entwickelt werden. Als Ein-Mann-Unternehmen bringe ich, der
+        Kopf hinter Elematic.at, eine persönliche Note in die Online-Welt. Mit einem scharfen Auge für Design
+        und einem Herz, das für Code schlägt, ist es mein Ziel, Ihre digitale Präsenz nicht nur zu verbessern,
+        sondern sie zum Leuchten zu bringen.
+    </p>
+    <h2 class="fw-semibold">Die Philosophie dahinter</h2>
+    <p>Ich denke, dass eine Website mehr ist als nur eine digitale Visitenkarte. Sie ist der Spiegel
+        Ihrer
+        Marke, der erste Eindruck und oftmals der entscheidende Kontakt, den ein potenzieller Kunde mit Ihrem
+        Unternehmen hat. Deshalb lege ich größten Wert auf ein Zusammenspiel von hervorragender Performance,
+        intuitivem Design und modernster Suchmaschinenoptimierung (SEO). Denn Ihre Zufriedenheit und Ihr Erfolg
+        im Netz stehen für mich an erster Stelle.</p>
+        <a class="btn btn-primary" href="{{ "/leistungen.html" | relative_url }}" role="button">Leistungen im Detail</a>
+</section>
+
+<hr>
+
+<section id="main-work">
+    <h2 class="fw-semibold pt-5">Referenzen</h4>
+        <p class="lead fw-normal">Tauchen Sie ein in unsere Welt des kreativen Webdesigns und lassen Sie sich von unseren erfolgreichen Projekten inspirieren.</p>
+        <p class="mb-4">Ich denke, dass eine Website mehr ist als nur eine digitale Visitenkarte. Sie ist der Spiegel
+            Ihrer
+            Marke, der erste Eindruck und oftmals der entscheidende Kontakt, den ein potenzieller Kunde mit Ihrem
+            Unternehmen hat. Deshalb lege ich größten Wert auf ein Zusammenspiel von hervorragender Performance,
+            intuitivem Design und modernster Suchmaschinenoptimierung (SEO). Denn Ihre Zufriedenheit und Ihr Erfolg
+            im Netz stehen für mich an erster Stelle.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
+
+            {% for item in site.data.projekte.item %}
+            <div class="col">
+                <a href="{{ item.url }}" class="text-decoration-none">
+                    <div class="card border-0 shadow-md">
+                        <img src="/assets/img/{{ item.img }}" width="100%" height="100%" class="card-img-top" alt="...">
+                        <div class="card-body bg-white rounded-bottom-2 p-4">
+                            <h3 class="h5 card-title text-primary">{{ item.title }}</h3>
+                            <p class="card-text">{{ item.content }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+</section>
