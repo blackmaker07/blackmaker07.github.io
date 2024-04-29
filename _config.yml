@@ -9,19 +9,19 @@ lang: de-AT
 copyright: © 2024 - Elematic.at
 
 # E-Mails
-email:
+email: info@elematic.at
 
 # Firma
-company-name:
+company-name: Elematic Webdesign
 company-address: 
-company-city:
-company-country:
+company-city: Wien
+company-country: Österreich
 company-fn: FN xxxxx s
 company-uid: ATUxxxxxxxx
 
 # Social Media
-twitter-url: 
-github-url:
+x-url: 
+github-url: https://github.com/blackmaker07/
 facebook-url: 
 instagram-url:
 
@@ -53,25 +53,3 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
-
-# Pagination (index.md -> index.html)
-paginate: 5
-paginate_path: "/blog:num/"
-
-# Archive
-jekyll-archives:
-    enabled: []
-    layout: archive
-    enabled: all
-    enabled:
-        - categories
-    enabled:
-        - year
-        - month
-        - tags
-    permalinks:
-        year: '/:year/'
-        month: '/:year/:month/'
-        day: '/:year/:month/:day/'
-        tag: '/tag/:name/'
-        category: '/category/:name/'
