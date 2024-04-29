@@ -1,6 +1,6 @@
 # Meta Daten
-url: # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: # the subpath of your site, e.g. /blog
+url: https://elematic.at # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: / # the subpath of your site, e.g. /blog
 title: Elematic Webdesign
 description: Webdesign aus Wien
 version: v0.1
