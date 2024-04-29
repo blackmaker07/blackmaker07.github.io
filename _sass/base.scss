@@ -1,6 +1,10 @@
 @import "functions";
 
 // 2. Include any default variable
+
+$prefix: ele-;
+
+
 $enable-gradients: true;
 $enable-dark-mode: false;
 
@@ -13,7 +17,7 @@ $body-color: #141414;
 $body-bg: #fafafa;
 
 $tooltip-color: $light;
-$tooltip-bg: #040a4d;
+$tooltip-bg: rgba(0,0,0,0.75);
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "variables";
@@ -78,18 +82,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
   font-weight: 600;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {
-  width: 15.5px;
+  width: 12.5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #040a4d;
+  background: rgba(0,0,0,0.8);
 }
 
 ::-webkit-scrollbar-thumb {
