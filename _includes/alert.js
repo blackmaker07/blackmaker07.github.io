@@ -1,1 +1,1 @@
-alert("Cookies akzeptiert.");
+// alert("Cookies akzeptiert.");
