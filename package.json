@@ -1,0 +1,15 @@
+{
+  "name": "blackmaker07.github.io",
+  "version": "1.0.0",
+  "description": "Webseite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christoph B.",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "bootstrap": "^5.3.3"
+  }
+}
