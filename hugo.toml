@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://blackmaker07.github.io/'
+languageCode = 'de-AT'
 title = 'My New Hugo Site'
 
 [[menus.main]]
