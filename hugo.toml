@@ -28,3 +28,8 @@ weight = 30
 [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
     target = "assets/js/bootstrap.bundle.min.js"
+
+[build]
+  writeStats = true
+  [build.buildStats]
+    enable = true
