@@ -1,1 +1,8 @@
 <p>Copyright {{ now.Year }}. All rights reserved.</p>
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+
+{{ $bootstrap := resources.Get "js/bootstrap.bundle.min.js" }}
+{{ $js := $bootstrap | fingerprint }}
+
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

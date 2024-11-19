@@ -21,3 +21,10 @@ weight = 30
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[[module.mounts]]
+    source = "assets"
+    target = "assets"
+[[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "assets/js/bootstrap.bundle.min.js"

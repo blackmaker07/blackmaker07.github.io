@@ -1,9 +1,22 @@
 {{- with resources.Get "css/main.css" }}
+
+  <!-- DEVELOPMENT ENVIRONMENT -->
   {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+
+      <!-- Include Bootstrap -->
+      {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
+      {{ $main := resources.Get "sass/main.scss" | toCSS  $options | minify | fingerprint | css.PostCSS }}
+      <link rel="stylesheet" href="{{ $main.RelPermalink }}"  media="screen">
+
+      {{- else }}
+
+  <!-- PRODUCTION ENVIRONMENT -->
+
+      <!-- Include Bootstrap -->
+      {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
+      {{ $main := resources.Get "sass/main.scss" | toCSS  $options | minify | fingerprint | css.PostCSS }}
+      <link rel="stylesheet" href="{{ $main.RelPermalink }}"  media="screen">
+
   {{- end }}
+ 
 {{- end }}
