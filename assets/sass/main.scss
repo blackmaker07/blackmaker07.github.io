@@ -1,3 +1,4 @@
+/*! purgecss start ignore */
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "node_modules/bootstrap/scss/functions";
 
@@ -24,6 +25,7 @@ $body-bg: #f1f1f1;
 @import "node_modules/bootstrap/scss/containers";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
+/*! purgecss end ignore */
 
 // 6. Module Optional
 // @import "node_modules/bootstrap/scss/accordion";
