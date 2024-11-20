@@ -2,13 +2,15 @@ baseURL = 'https://blackmaker07.github.io/'
 languageCode = 'de-AT'
 title = 'My New Hugo Site'
 
+# Navigation
+
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
+name = 'Blog'
 pageRef = '/posts'
 weight = 20
 
@@ -17,14 +19,34 @@ name = 'Tags'
 pageRef = '/tags'
 weight = 30
 
+[[menus.main]]
+name = 'Kontakt'
+pageRef = '/kontakt'
+weight = 40
+
+[[menus.main]]
+name = 'Impressum'
+pageRef = '/impressum'
+weight = 50
+
+[[menus.main]]
+name = 'Datenschutz'
+pageRef = '/datenschutz'
+weight = 60
+
+
+# Module
+
 [module]
-  [module.hugoVersion]
-    extended = false
-    min = "0.116.0"
+
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
 
 [[module.mounts]]
-    source = "assets"
-    target = "assets"
+source = "assets"
+target = "assets"
+
 [[module.mounts]]
-    source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-    target = "assets/js/bootstrap.bundle.min.js"
+source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+target = "assets/js/bootstrap.bundle.min.js"

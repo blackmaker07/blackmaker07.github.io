@@ -1,7 +1,12 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>    
-    {{ .Summary }}
-  {{ end }}
+
+  <!-- Neuesten Blogeinträge (3) -->
+  <h2>Neue Blogposts</h2>
+  {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li> 
+  {{ .Summary | truncate 360 }}
+{{end}}
+
+
 {{ end }}

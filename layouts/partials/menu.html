@@ -7,6 +7,9 @@ Renders a menu for the given menu ID.
 @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
 
+
+
+
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
@@ -22,11 +25,16 @@ Renders a menu for the given menu ID.
   {{- $page := .page }}
   {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
+
+    <!-- Setze active Menu class -->
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
     {{- end }}
+    <!-- Ende active Menu class -->
+
+
     {{- $name := .Name }}
     {{- with .Identifier }}
       {{- with T . }}
