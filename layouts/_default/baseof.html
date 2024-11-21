@@ -6,11 +6,9 @@
 <body>
   <header>
     {{ partial "header.html" . }}
-  </div>
   </header>
   <main>
     {{ block "main" . }}{{ end }}
-    {{ partial "breadcrumb.html" . }}
   </main>
   <footer>
     {{ partial "footer.html" . }}
