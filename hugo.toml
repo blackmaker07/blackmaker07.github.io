@@ -2,7 +2,7 @@ baseURL = 'https://blackmaker07.github.io/'
 languageCode = 'de-AT'
 title = 'My New Hugo Site'
 
-# Navigation
+# Main menu
 
 [menus]
 [[menus.main]]
@@ -25,12 +25,14 @@ name = 'Kontakt'
 pageRef = '/kontakt'
 weight = 40
 
-[[menus.main]]
+# Footer menu
+
+[[menus.footer]]
 name = 'Impressum'
 pageRef = '/impressum'
 weight = 50
 
-[[menus.main]]
+[[menus.footer]]
 name = 'Datenschutz'
 pageRef = '/datenschutz'
 weight = 60
@@ -53,9 +55,5 @@ source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 target = "assets/js/bootstrap.bundle.min.js"
 
 [[module.mounts]]
-source = "static"
-target = "static"
-
-[[module.mounts]]
 source = "node_modules/bootstrap-icons/font/fonts"
-target = "static/css/fonts"
+target = "assets/css/fonts"

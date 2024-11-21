@@ -1,4 +1,5 @@
-{{- with resources.Get "js/main.js" }}
+<!-- Bootstrap -->
+{{- with resources.Get "js/bootstrap.bundle.min.js" }}
   {{- if eq hugo.Environment "development" }}
     {{- with . | js.Build }}
       <script src="{{ .RelPermalink }}"></script>
