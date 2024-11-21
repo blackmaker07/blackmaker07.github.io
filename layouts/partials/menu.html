@@ -1,59 +1,26 @@
-{{- /*
-Renders a menu for the given menu ID.
+{{ with site.Menus.main }}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+  <a class="navbar-brand" href="#">Expand at md</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-@context {page} page The current page.
-@context {string} menuID The menu ID.
-
-@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-*/}}
-
-
-
-
-{{- $page := .page }}
-{{- $menuID := .menuID }}
-
-{{- with index site.Menus $menuID }}
-  <nav>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+      {{ range . }}
+      {{ if $.IsMenuCurrent .Menu . }}
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page"
+          href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ else }}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+      {{ end }}
     </ul>
-  </nav>
-{{- end }}
-
-{{- define "partials/inline/menu/walk.html" }}
-  {{- $page := .page }}
-  {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
-
-    <!-- Setze active Menu class -->
-    {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-    {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-    {{- end }}
-    <!-- Ende active Menu class -->
-
-
-    {{- $name := .Name }}
-    {{- with .Identifier }}
-      {{- with T . }}
-        {{- $name = . }}
-      {{- end }}
-    {{- end }}
-    <li>
-      <a
-        {{- range $k, $v := $attrs }}
-          {{- with $v }}
-            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-          {{- end }}
-        {{- end -}}
-      >{{ $name }}</a>
-      {{- with .Children }}
-        <ul>
-          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
-      {{- end }}
-    </li>
-  {{- end }}
-{{- end }}
+  </div>
+</nav>
+{{ end }}

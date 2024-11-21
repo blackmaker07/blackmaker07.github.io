@@ -1,12 +1,21 @@
 {{ define "main" }}
+
+<div class="container">
   {{ .Content }}
 
   <!-- Neuesten Blogeinträge (3) -->
-  <h2>Neue Blogposts</h2>
-  {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
-  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li> 
-  {{ .Summary | truncate 360 }}
-{{end}}
+  <h2>Die aktuellsten Blogeinträge</h2>
+  <ul class="list-group list-group-flush list-unstyled">
+    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+    <div class="bg-secondary p-3 mb-3">
+      <li><h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3></li>
+      <small>{{ .Page.Date | time.Format ":date_medium"}}</small>
+      {{ .Summary | truncate 360 }}
+    </div>
+    {{end}}
+  </ul>
+
+</div>
 
 
 {{ end }}

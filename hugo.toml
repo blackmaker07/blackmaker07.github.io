@@ -4,6 +4,7 @@ title = 'My New Hugo Site'
 
 # Navigation
 
+[menus]
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
