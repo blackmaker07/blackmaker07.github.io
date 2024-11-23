@@ -55,6 +55,10 @@ source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 target = "assets/js/bootstrap.bundle.min.js"
 
 [[module.mounts]]
+source = "node_modules/particles.js/particles.js"
+target = "assets/js/particles.js"
+
+[[module.mounts]]
 source = "static"
 target = "static"
 

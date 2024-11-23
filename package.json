@@ -12,10 +12,10 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "purgecss": "^7.0.2"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^6.0.0",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-flexbugs-fixes": "^5.0.2"
