@@ -1,0 +1,24 @@
+<div class="bg-body-tertiary p-3 p-md-4 mb-3 rounded-3">
+    <h4>Beiträge nach Tags</h4>
+    {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <div class="tagbutton">
+        » <a href={{ .RelPermalink }} class="text-decoration-none">{{ strings.FirstUpper $name }}</a>
+      <sup><small>{{$cnt}}</small></sup>
+      
+        </div>
+    {{end}}
+  {{end}}
+</div>
+
+<div class="bg-body-tertiary p-3 p-md-4 mb-3 rounded-3">
+    <h4>Beiträge nach Tags</h4>
+</div>
+
+<div class="bg-body-tertiary p-3 p-md-4 mb-3 rounded-3">
+    <h4>Hosted by</h4>
+    <div class="col-12 col-md-6 mx-auto">
+    <img class="img-fluid" src="/images/GitHub_Logo_White.png" alt="demo">
+</div>
+
+</div>

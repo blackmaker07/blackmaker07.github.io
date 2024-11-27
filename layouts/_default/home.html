@@ -1,45 +1,24 @@
 {{ define "main" }}
 
-<div class="outer-container" style="position: relative; ">
-  <div id="particles-js">  </div>
-  <div class="particles-overlay"></div>
-  <div id="home-splash" class="container-fluid">
-    <div class="px-4 py-5 text-center">
-      <i class="bi bi-apple" style="font-size: 5.5rem;"></i>
-      <h1 class="display-5 fw-bold text-body-emphasis">{{ .Site.Title}}</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-          popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
-          prebuilt components, and powerful JavaScript plugins.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn btn-primary btn-lg px-4 gap-3" style="pointer-events: all;">Primary button</button>
-          <button type="button" class="btn btn-outline-danger btn-lg px-4" style="pointer-events: all;">Secondary</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+{{ partial "home-splash.html" . }}
 
 <div class="container">
 
+  <div class="bg-body-tertiary p-3 p-md-4 mb-3 rounded-3">
   {{ .Content }}
-
-  <!-- Neuesten Blogeinträge (3) -->
-  <h2>Die aktuellsten Blogeinträge</h2>
-  <ul class="list-group list-group-flush list-unstyled">
-    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
-    <div class="bg-dark p-3 p-md-4 mb-3">
-      <li>
-        <h3 class="mb-0 "><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-      </li>
-      <small>{{ .Page.Date | time.Format ":date_medium"}}</small>
-      {{ .Summary | truncate 360 }}
-    </div>
-    {{end}}
-  </ul>
-
 </div>
 
+  <div class="row gx-3">
+
+    <section class="col-sm-9">
+      {{ partial "newest_entrys.html" . }}
+    </section>
+
+    <aside class="col-sm-3">
+      {{ partial "aside.html" . }}
+    </aside>
+  </div>
+
+</div>
 
 {{ end }}

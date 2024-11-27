@@ -5,12 +5,14 @@
 // 2. Include any default variable overrides here
 
 $prefix: "p7-";
-$tooltip-bg: #fff !important;   
 
-$body-bg-dark: #121212;
-$primary: #ff9117;
-$secondary: #121212;
+$body-bg-dark: #101010;
+$body-tertiary-bg-dark: #181818;
 
+$body-color-dark: #fff;
+
+$primary: #9980FA;
+$secondary: #3b3b3b;
 
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -39,7 +41,7 @@ $secondary: #121212;
 // 6. Module Optional
 // @import "node_modules/bootstrap/scss/accordion";
 @import "node_modules/bootstrap/scss/alert";
-// @import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/breadcrumb";
 @import "node_modules/bootstrap/scss/button-group";
 @import "node_modules/bootstrap/scss/buttons";
