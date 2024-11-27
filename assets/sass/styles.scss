@@ -38,10 +38,10 @@ ul#footer-nav li:last-child a.nav-link {
 
 @include color-mode(dark) {
   .particles-overlay {
-    background: rgb(18,18,18);
-    background: -moz-linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(0,0,0,0) 70%);
-    background: -webkit-linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(0,0,0,0) 70%);
-    background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(0,0,0,0) 70%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#000000",GradientType=1);
+    background: rgb(16,16,16);
+    background: -moz-linear-gradient(0deg, rgba(16,16,16,1) 0%, rgba(0,0,0,0) 70%);
+    background: -webkit-linear-gradient(0deg, rgba(16,16,16,1) 0%, rgba(0,0,0,0) 70%);
+    background: linear-gradient(0deg, rgba(16,16,16,1) 0%, rgba(0,0,0,0) 70%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#101010",endColorstr="#000000",GradientType=1);
   }
 }
