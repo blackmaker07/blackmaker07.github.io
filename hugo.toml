@@ -8,34 +8,32 @@ title = 'Project7'
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
-weight = 10
+weight = 1
 
 [[menus.main]]
 name = 'Blog'
-pageRef = '/posts'
-weight = 20
+pageRef = '/posts/'
+weight = 2
 
 [[menus.main]]
 name = 'Tags'
-pageRef = '/tags'
-weight = 30
+pageRef = '/tags/'
+weight = 3
 
 [[menus.main]]
 name = 'Kontakt'
-pageRef = '/kontakt'
-weight = 40
-
-# Footer menu
+pageRef = '/contact/'
+weight = 4
 
 [[menus.footer]]
 name = 'Impressum'
-pageRef = '/impressum'
-weight = 50
+pageRef = '/impressum/'
+weight = 10
 
 [[menus.footer]]
 name = 'Datenschutz'
-pageRef = '/datenschutz'
-weight = 60
+pageRef = '/datenschutz/'
+weight = 11
 
 
 # Module

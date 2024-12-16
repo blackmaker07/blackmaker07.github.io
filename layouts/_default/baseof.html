@@ -5,20 +5,25 @@
   {{ partial "head.html" . }}
 </head>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R7E7T91HG8"></script>
+
 <body>
 
   <header>
-    {{ partial "header.html" . }}
+    {{ partial "navbar.html" . }}
   </header>
+
   <main>
+    {{ partial "home-splash.html" . }}
     {{ block "main" . }}{{ end }}
   </main>
+
   <footer>
     {{ partial "footer.html" . }}
   </footer>
 
   {{ partial "java-scripts.html" . }}
-
+  {{ partial "consent.html" . }}
 </body>
 
 </html>

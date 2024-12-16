@@ -2,6 +2,10 @@ ul#footer-nav li:last-child a.nav-link {
     padding-right: 0; 
 }
 
+ul#footer-nav li .active {
+  color: #fff;
+}
+
 .navbar {
   z-index: 1500;
 }

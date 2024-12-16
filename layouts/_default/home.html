@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-{{ partial "home-splash.html" . }}
 
 <div class="container">
 
@@ -8,16 +7,15 @@
   {{ .Content }}
 </div>
 
-  <div class="row gx-3">
+<div class="row gx-3">
+  <section class="col-sm-9">
+    {{ partial "newest_entrys.html" . }}
+  </section>
 
-    <section class="col-sm-9">
-      {{ partial "newest_entrys.html" . }}
-    </section>
-
-    <aside class="col-sm-3">
-      {{ partial "aside.html" . }}
-    </aside>
-  </div>
+  <aside class="col-sm-3">
+    {{ partial "aside.html" . }}
+  </aside>
+</div>
 
 </div>
 

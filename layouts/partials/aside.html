@@ -4,7 +4,7 @@
     {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
         <div class="tagbutton">
         » <a href={{ .RelPermalink }} class="text-decoration-none">{{ strings.FirstUpper $name }}</a>
-      <sup><small>{{$cnt}}</small></sup>
+      <small><span class="badge text-bg-secondary">{{$cnt}}</span></small>
       
         </div>
     {{end}}
