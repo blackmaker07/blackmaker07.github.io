@@ -2,4 +2,4 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-R7E7T91HG8');
+gtag('config', 'G-R7E7T91HG8', { 'anonymize_ip': true });
