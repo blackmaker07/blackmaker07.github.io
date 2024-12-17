@@ -2,6 +2,7 @@ baseURL = 'https://blackmaker07.github.io/'
 languageCode = 'de-AT'
 title = 'Project7'
 
+
 # Main menu
 
 [menus]
@@ -55,6 +56,10 @@ target = "assets/js/bootstrap.bundle.min.js"
 [[module.mounts]]
 source = "node_modules/particles.js/particles.js"
 target = "assets/js/particles.js"
+
+[[module.mounts]]
+source = "node_modules/jquery/dist/jquery.js"
+target = "assets/js/jquery.js"
 
 [[module.mounts]]
 source = "static"

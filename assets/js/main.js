@@ -1,6 +1,10 @@
 console.log("\x1b[36m%s\x1b[0m", "Webseite erstellt am 01.01.2025 von Project 7");
 
 import * as bootstrap from "bootstrap";
+import * as particles_nb from "particles.js";
+import jQuery from "jquery";
+window.$ = window.jQuery = jQuery;
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
 
