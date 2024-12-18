@@ -1,5 +1,5 @@
 +++
-title = 'Home'
+title = 'Project7 - Fast responsive seo optimized webdesign.'
 date = 2023-01-01T08:00:00-07:00
 draft = false
 description = "Project 7 Startseite"

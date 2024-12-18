@@ -1,12 +1,14 @@
 {{ define "main" }}
 
 <div class="container">
-<h1>{{ .Title }}</h1>
+    <div class="bg-body-tertiary p-3 p-md-4 mb-3 rounded-3 position-relative">
+<p>{{ .Title }}</p>
 
+<!--
 {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
 {{ $dateHuman := .Date | time.Format ":date_long" }}
 <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
+-->
 
 
 
@@ -14,6 +16,7 @@
 {{ .Content }}
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 
+    </div>
 </div>
 
 {{ end }}
