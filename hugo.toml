@@ -3,6 +3,17 @@ languageCode = 'de-AT'
 title = 'Project7'
 
 
+
+[params]
+  author = 'Christopher B.'
+  subtitle = 'The Best Widgets on Earth'
+
+  twitter = 'DrSeltsam15'
+  twitter_url = 'https://x.com/DrSeltsam15'
+  
+  github_url = 'https://github.com/blackmaker07'
+
+
 # Main menu
 
 [menus]

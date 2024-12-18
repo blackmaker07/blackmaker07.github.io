@@ -11,8 +11,8 @@
         <span class="mb-3 mb-md-0 text-body-secondary">Created by {{ .Site.Title }} · © {{ time.Now | time.Format "Jan 2006" }}</span>
       </div>
       <ul class="nav col-md-4 justify-content-center list-unstyled d-flex mb-3 mb-md-0">
-        <li class="ms-3"><a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip" data-bs-placement="top"><i class="bi bi-twitter-x" style="font-size: 1.50rem;"></i></a></li>
-        <li class="ms-3"><a href="#"><i class="bi bi-github" style="font-size: 1.50rem;"></i></a></li>
+        <li class="ms-3"><a href="{{ .Site.Params.twitter_url }}" data-bs-toggle="tooltip" data-bs-title="Default tooltip" data-bs-placement="top"><i class="bi bi-twitter-x" style="font-size: 1.50rem;"></i></a></li>
+        <li class="ms-3"><a href="{{ .Site.Params.github_url }}" data-bs-toggle="tooltip" data-bs-title="Default tooltip" data-bs-placement="top"><i class="bi bi-github" style="font-size: 1.50rem;"></i></a></li>
       </ul>
       <ul id="footer-nav" class="nav col-md-4 justify-content-end d-flex mb-3 mb-md-0">
         {{ with site.Menus.footer }}

@@ -1,0 +1,76 @@
+{{/* Config */}}
+{{ $switches := (dict
+"facebook" true
+"twitter" true
+"linkedin" true
+"whatsapp" true
+"xing" false
+"mail" true
+) }}
+
+
+{{/* Code */}}
+{{ $url := printf "%s" .Permalink | absLangURL }}
+{{ $textBody := print .Title "\n\n" (.Summary | plainify | truncate 200) "\n\n" $url "\n" }}
+{{ $encodedSummary := strings.TrimPrefix "=" (querify "" (.Summary | plainify | truncate 200)) }}
+
+<style>
+    #share-nav i {
+        margin-right: 0.5rem;
+    }
+</style>
+
+
+<ul id="share-nav" class="nav justify-content-end">
+    <span class="me-2">Share on:</span>
+
+    {{ if $switches.facebook }}
+    <li class="nav-item">
+        <a href="https://www.facebook.com/sharer.php?u={{ $url }}&t={{ .Title }}" target="_blank">
+            <i class="bi bi-facebook"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.twitter }}
+    <li class="nav-item">
+        <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}" target="_blank">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.linkedin }}
+    <li class="nav-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ $url }}&title={{ .Title }}&summary={{ $encodedSummary }}"
+            target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.whatsapp }}
+    <li class="nav-item">
+        <a href="whatsapp://send?text={{ $textBody }}" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.xing }}
+    <li class="nav-item">
+        <a href="https://www.xing.com/social_plugins/share/new?sc_p=xing-share&h=1&url={{ $url }}" target="_blank">
+            <i class="bi bi-xing"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.mail }}
+    <li class="nav-item">
+        <a href="mailto:blabla@blabla.at?subject={{ .Title }}&body={{ $textBody }}" target="_blank">
+            <i class="bi bi-envelope m-0"></i>
+        </a>
+    </li>
+    {{ end }}
+
+</ul>

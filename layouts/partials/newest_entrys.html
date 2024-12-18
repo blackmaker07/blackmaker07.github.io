@@ -22,14 +22,26 @@
   </a></p>
 
    <footer class="small text-light text-opacity-50 border-top pt-2">
-    <span><i class="bi bi-tags"></i> Tags: </span> 
-     {{- with .Params.tags -}}
-     {{- if ge (len .) 1 -}}
-     {{- range . -}}
-     <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/"><span class="badge text-bg-secondary">{{ . }}</span></a>
-     {{ end -}}
-     {{- end -}}
-     {{- end -}}
+
+    <div class="d-flex justify-content-between">
+      <div> 
+        <span><i class="bi bi-tags"></i> Tags: </span>
+        {{- with .Params.tags -}}
+        {{- if ge (len .) 1 -}}
+        {{- range . -}}
+        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/"><span class="badge text-bg-secondary">{{ . }}</span></a>
+        {{ end -}}
+        {{- end -}}
+        {{- end -}}
+      </div>
+    
+      <div>
+        {{ partial "share-buttons.html" . }}
+      </div>
+    
+    </div>
+
+
    </footer>
 
  </article>
