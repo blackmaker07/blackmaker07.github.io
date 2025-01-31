@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-bs-theme="light"
+  class="h-100">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body class="d-flex flex-column h-100">
+
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+
+  <main class="container-xl mt-4">
+      <div class="row g-md-3">
+        <div class="{{ if .Params.aside }}col-12 col-lg-8{{ else }}col-12{{ end }}">
+          {{ block "main" . }}{{ end }}
+        </div>
+
+        {{ if .Params.aside }}
+        <aside class="col-12 col-lg-4">
+          {{ partial "aside.html" . }}
+        </aside>
+        {{ else }}
+
+        {{ end }}
+      </div>
+  </main>
+
+  <footer class="mt-auto">
+    {{ partial "footer.html" . }}
+  </footer>
+
+<!-- Cookle Consent 
+  <a href="#" onclick="eraseCookie('consent-settings'); location.reload();">reset link</a>
+  {{ partial "consent.html" . }}
+-->
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+{{/* Config */}}
+{{ $switches := (dict
+"facebook" true
+"twitter" true
+"linkedin" true
+"whatsapp" true
+"xing" false
+"mail" true
+) }}
+{{ $color := "#aaaaaa" }}
+{{ $hoverColor := "#006797" }}
+
+{{/* Code */}}
+{{ $url := printf "%s" .Permalink | absLangURL }}
+{{ $textBody := print .Title "\n\n" (.Summary | plainify | truncate 200) "\n\n" $url "\n" }}
+
+<nav class="nav sharebuttons">
+    <div class="d-inline small text-secondary">Teilen:</div>
+    <ul class="m-0 p-0">
+
+        {{ if $switches.facebook }}
+        <li class="nav-item">
+            <a href="https://www.facebook.com/sharer.php?u={{ $url }}&t={{ .Title }}" data-bs-toggle="tooltip"
+                data-bs-title="Auf Facebook teilen" aria-label="Teilen Sie den Beitrag auf Facebook"
+                target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                
+            </a></li>
+        {{ end }}
+
+        {{ if $switches.twitter }}
+        <li><a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ $url }}"
+                data-bs-toggle="tooltip" data-bs-title="Auf X teilen" aria-label="Teilen Sie den Beitrag auf X"
+                target="_blank">
+                
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                  </svg>
+            
+            
+            </a></li>{{ end }}
+
+
+
+
+
+
+        {{ if $switches.whatsapp }}<li><a href="whatsapp://send?text={{ $textBody }}" data-bs-toggle="tooltip"
+                data-bs-title="Auf Whatsapp teilen" aria-label="Teilen Sie den Beitrag auf Whatsapp"
+                target="_blank">
+                
+                
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                  </svg>
+            
+            
+            </a></li>{{ end }}
+
+
+        {{ if $switches.xing }}<li><a
+                href="https://www.xing.com/social_plugins/share/new?sc_p=xing-share&h=1&url={{ $url }}"
+                data-bs-toggle="tooltip" data-bs-title="Auf Xing teilen" aria-label="Teilen Sie den Beitrag auf Xing"
+                target="_blank"><svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd">
+                        <path
+                            d="m0 0v50h50v-50zm8.65384615 31.8413187 6.00582415-9.8893407-4.5034066-7.9346154h7.6226374l4.5057143 7.9346154-6.0062638 9.8893407zm28.41967035 10.4663736h-8.0884616l-7.7408791-13.5706593 12.0154945-21.04472531h8.0864835l-12.0153846 21.04472531z"
+                            fill="{{ $color }}" class="will-change" fill-rule="nonzero" />
+                        <path d="m0 0h50v50h-50z" />
+                    </g>
+                </svg></a></li>{{ end }}
+
+
+
+
+        {{ if $switches.mail }}<li><a href="mailto:?subject={{ .Title }}&body={{ $textBody }}" data-bs-toggle="tooltip"
+                data-bs-title="Per E-mail teilen" aria-label="Teilen Sie den Beitrag per E-Mail" target="_blank">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                  </svg>  
+     
+            </a></li>{{ end }}
+    </ul>
+</nav>
+<style>
+    .sharebuttons,
+    .sharebuttons ul {
+        display: flex;
+        margin: 0 0;
+        align-items: center;
+    }
+
+    .sharebuttons ul li {
+        list-style: none;
+        margin: 0;
+    }
+
+    .sharebuttons ul li a {
+        padding: 0 0.5rem;
+        display: block;
+        color: var($primary);
+    }
+
+
+
+    .sharebuttons ul li a svg {
+        width: auto;
+        height: 1rem;
+        display: block;
+    }
+
+    .will-change {
+        transition: 250ms;
+    }
+
+    nav.sharebuttons li>a:hover .will-change {
+        fill: {
+                {
+                $hoverColor
+            }
+        }
+    }
+</style>

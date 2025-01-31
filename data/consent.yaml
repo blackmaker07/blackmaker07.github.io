@@ -1,0 +1,5 @@
+items:
+  - title: Disqus
+    description: Diese Cookies ermöglichen die Kommentarfunktion auf der Website. Sie speichern Ihre Anmeldung, Einstellungen und Kommentare, um Ihnen eine nahtlose Nutzung des Disqus-Kommentarsystems zu bieten. Ohne diese Cookies können Sie möglicherweise keine Kommentare schreiben oder Ihre Kommentare zwischen Seiten besuchen nicht synchronisiert werden.
+    is_functional: false
+    script_file: disqus.js

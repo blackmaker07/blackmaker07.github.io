@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<div class="container-xl mt-4">
+    <div class="row g-md-3">
+        <div class="{{ if .Params.aside }} col-8 {{ else }} col-12 {{ end }}">
+            <div class="p7-bg">
+                huihuih
+            </div>
+        </div>
+
+        {{ if .Params.aside }}
+        <div class="col-4">
+            {{ partial "aside.html" . }}
+        </div>
+        {{ else }}
+
+        {{ end }}
+    </div>
+</div>
+
+{{ end }}

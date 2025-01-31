@@ -1,0 +1,16 @@
+<div class="p7-bg rounded-0 py-3">
+    <div class="container-xl">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+            <section id="footer-copyright" class="mb-0">
+                <p class="mb-0">Copyright © {{ now.Year }} by {{ .Site.Title }}.at</p>
+            </section>
+
+            <section id="footer-menu" class="mb-0">
+                <ul class="nav m-0 p-0">
+                    {{ partial "menu.html" (dict "menuID" "footer" "page" . ) }}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>

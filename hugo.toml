@@ -1,0 +1,69 @@
+baseURL = 'https://blackmaker07.github.io/'
+languageCode = 'de-AT'
+title = 'TrueWords'
+
+enableRobotsTXT = true
+
+[permalinks]
+posts = "/blog/:title/"
+
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+  path = 'page'
+
+[params]
+description = 'Webdesigner und Blogger aus Wien'
+author = 'Christoph'
+  [params.social]
+    twitter = 'DrSeltsam15'
+
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Webdesign'
+pageRef = '/webdesign'
+weight = 30
+
+[[menus.main]]
+name = 'Kontakt'
+pageRef = '/contact'
+weight = 40
+
+[[menus.footer]]
+name = 'Datenschutz'
+pageRef = '/datenschutz'
+weight = 50
+
+[[menus.footer]]
+name = 'Impressum'
+pageRef = '/impressum'
+weight = 51
+
+
+
+[[module.mounts]]
+   source = "assets"
+   target = "assets"
+
+[[module.mounts]]
+   source = "static"
+   target = "assets"
+
+[[module.mounts]]
+   source = "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+   target = "assets/js/bootstrap.bundle.min.js"

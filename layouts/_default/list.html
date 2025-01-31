@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<section id="default-list">
+    <div class="p7-bg mb-4">
+        <h1>{{ .Title }}</h1>
+        {{ .Params.Description }}
+        {{ .Content }}
+    </div>
+
+    {{ range .Pages.ByTitle }}
+    <div class="p7-bg mb-4">
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    </div>
+    {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,72 @@
+// global
+
+
+// main-nav
+
+#main-nav {
+  .nav-link {
+    color: #cecece;
+  }
+
+  .nav-link:hover {
+    color: #ffffff;
+  }
+
+ a.nav-link.active {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+section p:last-child {
+  margin-bottom: 0rem;
+}
+
+//** blog
+
+
+
+// aside
+
+#kategorien,
+#neuste-beitraege {
+
+  li.nav-item {
+    border-bottom: 1px solid;
+    border-color: $gray-400;
+    padding: 0.5rem 0;
+  }
+
+  li.nav-item:last-child {
+    border-bottom: 0;
+    padding: 0.5rem 0 0 0;
+  }
+
+  li.nav-item:first-child {
+    padding: 0 0 0.5rem 0;
+  }
+
+  li:last-child {
+    padding-bottom: 0;
+  }
+
+}
+
+// p7
+
+.p7-bg {
+  background-color: var(--p7-tertiary-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.p7-border {
+  border-left: 3px solid #ccc;
+}
+.p7-border:hover {
+  border-left: 3px solid $primary;
+}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+<section id="kontakt-einleitung" class="p7-bg">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</section>
+
+<section id="kontakt-formular" class="p7-bg">
+  <h2>Kontaktformular</h2>
+  <form class="row g-3 needs-validation" action="https://formspree.io/f/xknoepjo" method="POST">
+    <div class="col-12 col-md-6">
+      <input type="text" class="form-control border-0" autocomplete="family-name" id="validation-vorname" value=""
+        name="Vorname" placeholder="Vor- und Nachname" required />
+      <div class="valid-feedback">Eingabe valid.</div>
+    </div>
+    <div class="col-12 col-md-6">
+      <input type="email" class="form-control border-0" autocomplete="off" id="validation-email"
+        aria-describedby="emailHelp" name="email" placeholder="E-Mail Adresse" required />
+      <div class="valid-feedback">Eingabe valid.</div>
+    </div>
+    <div class="col-12">
+      <textarea id="contact-textform" class="form-control border-0" autocomplete="off" id="validation-textarea"
+        style="min-height: 250px" placeholder="Ihr Anliegen" name="nachricht" required></textarea>
+      <div class="valid-feedback">Eingabe valid.</div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+        <label class="form-check-label" for="invalidCheck">
+          Ich stimme zu, dass meine Angaben und Daten zur Beantwortung meiner
+          Anfrage gemäß der <a class="link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="{{ "/datenschutz" }}" target="_blank">Datenschutzerklärung</a>
+          verarbeitet werden. Meine
+          Einwilligung kann ich jederzeit per E-Mail widerrufen.
+        </label>
+        <div class="invalid-feedback">Zustimmung erforderlich.</div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" role="button" type="submit">
+        Nachricht absenden
+      </button>
+    </div>
+  </form>
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</section>
+
+{{ end }}

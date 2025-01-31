@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<section id="home-splash" class="text-center p7-bg p-5">
+  <h1 class="text-body-emphasis">{{ .Site.Title }} - Ein Ort für Kreativität, Innovation und digitale Kunst</h1>
+  <p class="col-lg-12 mx-auto lead">
+    {{ .Content | plainify }}
+  </p>
+</section>
+
+<section id="home-webblog">
+  <div class="row g-4">
+    <div class="col-12 col-md-6">
+      <div class="p7-bg p7-border h-100 position-relative">
+        <h2><a href="/webdesign" class="text-decoration-none stretched-link">Webdesigner</a></h2>
+        <p class="lead">Tauchen Sie ein in ein Webdesign mit rasender Geschwindigkeit, das nicht nur die Blicke fängt,
+          sondern auch die Herzen gewinnt.</p>
+        <p>Ich biete
+          Ihnen eine digitale Umgebung, die durch schnelle Performance und ausgezeichnete SEO besticht, damit Ihre
+          Besucher sofort in Ihre Welt
+          eintauchen können. </p>
+  </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="p7-bg p7-border h-100 position-relative">
+        <h2><a href="/blog" class="text-decoration-none stretched-link">Blogger</a></h2>
+        <p class="lead">
+          Mein Blog ist ein Ort der Reflexion und des intellektuellen Austauschs, wo die Themen Politik und Stoizismus
+          in den Vordergrund treten.</p>
+        <p>Hier begegnen Sie einer politischen Analyse, die das komplexe Geflecht unserer
+          modernen Gesellschaft durchdringt, von den Gassen Wiens bis zu globalen Debatten.</p>
+ </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="home-warum" class="p7-bg">
+  <h2>Warum ich?</h2>
+
+  <p>In einer Welt, in der digitales Chaos oft vorherrschen kann, biete ich Klarheit und Struktur. Meine Arbeit ist
+    geprägt von:</p>
+
+  <ul>
+    <li>Persönlichem Engagement: Jeder Kunde bekommt meine volle Aufmerksamkeit, weil Ihre Projekte mir am Herzen
+      liegen.</li>
+    <li>Qualität vor Quantität: Ich bevorzuge weniger Projekte, aber mit mehr Detailgenauigkeit und Perfektion.</li>
+    <li>Kontinuierliche Weiterentwicklung: Ich halte mich stets auf dem neuesten Stand der Technik und Design-Trends,
+      um Ihnen das Beste zu bieten.</li>
+  </ul>
+</section>
+
+
+<section id="home-contact" class="p7-bg bg-primary text-center text-light">
+  <h2>Nehmen Sie Kontakt auf</h2>
+  <p>
+    Ob Sie Fragen haben, eine Zusammenarbeit anregen möchten oder einfach nur mehr über meine Dienstleistungen erfahren
+    wollen – ich bin hier, um Ihnen zu helfen.
+  </p>
+  <a href="/contact" class="btn btn-outline-light btn-lg" role="button">Zur Kontaktseite</a>
+</section>
+
+{{ end }}

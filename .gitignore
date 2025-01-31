@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+
+# Generated files by Hugo
+/public/
+/node_modules/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Temporary lock file while building
+/.hugo_build.lock

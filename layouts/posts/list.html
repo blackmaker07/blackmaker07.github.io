@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<section id="blog-introduction" class="p7-bg">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <p>
+        Ich lade euch ein, meine Perspektiven zu lesen, zu hinterfragen und zu diskutieren, in dem Wissen,
+        dass Meinungsvielfalt eine Bereicherung für uns alle ist. Viel Spaß beim Lesen und Teilen der
+        Gedanken!
+    </p>
+</section>
+
+{{ $pages := where site.RegularPages "Type" "posts" }}
+{{ $paginator := .Paginate $pages }}
+
+<section id="blog-post-list">
+    {{ range $paginator.Pages }}
+    <article class="p7-bg p7-border position-relative mb-4">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                {{ $featured := (.Resources.ByType "image").GetMatch "*jpg*" }}
+                {{ with $featured }}
+                {{ $featured := .Resize "205x webp q100" }}
+                <img src="{{ $featured.RelPermalink }}" alt="{{ $.Params.idescription }}"
+                    class="img-fluid w-100 mb-4 mb-md-0 rounded-3">
+                {{ end }}
+            </div>
+            <div class="col-12 col-md-8">
+                <h2 class="h4 mb-0">
+                    <a href="{{ .RelPermalink }}" class="text-decoration-none stretched-link">
+                        {{ .LinkTitle | truncate 100 }}
+                    </a>
+                </h2>
+                <div class="small mb-2">
+                    <address class="author d-inline">Von
+                        <i class="bi bi-person-fill"></i>
+                        {{ .Params.author }}
+                    </address>
+                    am
+                    <time itemprop="datePublished" datetime="{{ .Date  }}">
+                        {{ .Date.Day }}. {{ index
+                        site.Data.months_german (printf "%d"
+                        .Date.Month) }} {{ .Date.Year }}
+                    </time>
+                </div>
+                </p>{{ .Summary | truncate 200 | plainify }}
+                <p>
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</section>
+
+{{ partial "pagination.html" . }}
+
+{{ end }}

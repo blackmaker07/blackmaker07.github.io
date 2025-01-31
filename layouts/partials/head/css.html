@@ -1,0 +1,12 @@
+{{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
+{{- with resources.Get "sass/main.scss" | toCSS $options }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="preload" href="{{ .RelPermalink }}" as="style">
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="preload" href="{{ .RelPermalink }}" as="style">
+      <link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css" media="all">
+    {{- end }}
+  {{- end }}
+{{- end }}

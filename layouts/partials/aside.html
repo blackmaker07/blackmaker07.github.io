@@ -1,0 +1,51 @@
+<section id="aside-author" class="p7-bg">
+    <h3>Autor</h3>
+    <p>Christoph, ein überzeugter Verfechter der Meinungsfreiheit, nutzt seinen Blog, um seine Gedanken
+        und Überzeugungen mit der Welt zu teilen.</p>
+</section>
+
+<section id="neuste-beitraege" class="p7-bg">
+    <h3>Neuste Beiträge</h3>
+    <ul class="nav flex-column">
+        {{ range first 5 (where site.RegularPages "Type" "posts") }}
+        <li class="nav-item position-relative">
+            <time itemprop="datePublished" datetime='{{ .Date  }}'><span class="small text-secondary"> {{ .Date.Day
+                    }}. {{ index
+                    site.Data.months_german (printf "%d"
+                    .Date.Month) }} {{ .Date.Year }}</span></time>
+            <a class="nav-link p-0 d-inline stretched-link" href="{{ .RelPermalink }}">- {{ .Title | truncate 65
+                }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+
+<section id="kategorien" class="p7-bg">
+    <h3>Kategorien</h3>
+    <ul class="nav flex-column">
+        {{ range sort .Site.Taxonomies.categories }}
+        <li class="nav-item position-relative">
+        <a class="nav-link p-0 d-inline stretched-link" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    </li>
+        {{ end }}
+    </ul>    
+</section>
+
+
+
+<section id="beitraege-nach-tags" class="p7-bg">
+    <h3>Beiträge nach Tags</h3>
+
+      <div class="tags-list">
+        <ul class="list-unstyled d-inline">
+            {{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          <li class="badge rounded-3 bg-primary text-decoration-none mb-1 position-relative me-1"><a
+              href="{{ .RelPermalink }}" class="link-light text-decoration-none stretched-link">{{ $title := .LinkTitle }}{{ $trimmedTitle :=
+              $title | strings.TrimPrefix "Tag:" }}{{ $trimmedTitle }} ({{$cnt}})</a></li>
+              {{ end }}
+              {{ end }}
+        </ul>
+      </div>
+
+</section>
