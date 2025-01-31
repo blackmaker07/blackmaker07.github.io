@@ -70,3 +70,62 @@ section p:last-child {
 .p7-border:hover {
   border-left: 3px solid $primary;
 }
+
+
+// search
+
+.search-container {
+  margin: 20px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-field {
+  position: relative;
+}
+
+
+.clear-button {
+
+  display: none;
+}
+
+
+.search-result {
+  position: relative;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: var(--p7-tertiary-bg);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.search-result:last-child {
+  border-bottom: none;
+}
+
+.search-result h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.search-result h3 a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.search-result h3 a:hover {
+  color: #0056b3;
+}
+
+.search-result p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.no-results {
+  color: #999;
+  text-align: center;
+}

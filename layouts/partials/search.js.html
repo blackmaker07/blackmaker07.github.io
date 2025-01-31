@@ -1,0 +1,63 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const clearButton = document.getElementById('clear-search');
+        const pages = [
+            {{ range .Site.RegularPages }}
+                { title: "{{ .Title }}", content: "{{ .Plain | htmlUnescape }}", url: "{{ .RelPermalink }}" },
+            {{ end }}
+        ];
+    
+        // Event listener for search input
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            let results = [];
+    
+            if (searchTerm.length > 0) {
+                results = pages.filter(page => 
+                    page.title.toLowerCase().includes(searchTerm)
+                );
+                if (results.length === 0) {
+                    results = pages.filter(page => 
+                        page.content.toLowerCase().includes(searchTerm)
+                    );
+                }
+            }
+    
+            updateSearchResults(results);
+        });
+    
+        // Event listener for clear button
+        clearButton.addEventListener('click', function() {
+            searchInput.value = '';
+            updateSearchResults([]);
+        });
+    
+        // Function to update search results
+        function updateSearchResults(results) {
+            searchResults.innerHTML = '';  // Clear previous results
+            
+            if (results.length > 0) {
+                const heading = document.createElement('h2');
+                heading.textContent = "Suchergebnisse";
+                searchResults.appendChild(heading);
+    
+                results.forEach(result => {
+                    const resultElement = document.createElement('div');
+                    resultElement.className = 'search-result';
+                    resultElement.innerHTML = `
+                        <h3><a class="stretched-link" href="${result.url}">${result.title}</a></h3>
+                        <p>${result.content.substring(0, 150)}...</p>
+                    `;
+                    searchResults.appendChild(resultElement);
+                });
+            }
+        }
+        
+        // Show or hide clear button based on input
+        searchInput.addEventListener('keyup', function() {
+            clearButton.style.display = this.value ? 'block' : 'none';
+        });
+    });
+    </script>

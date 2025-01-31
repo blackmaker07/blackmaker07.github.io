@@ -9,8 +9,7 @@
             <div class="d-flex flex-column small mb-3">
 
             <div>
-              <address class="author d-inline">Von {{ .Params.author }}</address>
-              am <time itemprop="datePublished" datetime='{{ .Date  }}'>{{ .Date.Day }}. {{ index
+              <address class="author d-inline">Von {{ .Params.author }}</address> am <time itemprop="datePublished" datetime='{{ .Date  }}'>{{ .Date.Day }}. {{ index
                 site.Data.months_german (printf "%d"
                 .Date.Month) }} {{ .Date.Year }}</time>
             </div>
