@@ -14,7 +14,8 @@
             const searchTerm = this.value.toLowerCase();
             let results = [];
     
-            if (searchTerm.length > 0) {
+            // Suche beginnt erst ab 3 Buchstaben
+            if (searchTerm.length >= 3) {
                 results = pages.filter(page => 
                     page.title.toLowerCase().includes(searchTerm)
                 );
@@ -60,4 +61,4 @@
             clearButton.style.display = this.value ? 'block' : 'none';
         });
     });
-    </script>
+</script>

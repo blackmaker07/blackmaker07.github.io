@@ -34,8 +34,7 @@
                 <div class="small mb-2">
                     <address class="author d-inline">Von
                         <i class="bi bi-person-fill"></i>
-                        {{ .Params.author }}
-                    </address> am <time itemprop="datePublished" datetime="{{ .Date  }}">{{ .Date.Day }}.{{ index
+                        {{ .Params.author }} am </address><time itemprop="datePublished" datetime="{{ .Date  }}">{{ .Date.Day }}.{{ index
                         site.Data.months_german (printf "%d"
                         .Date.Month) }} {{ .Date.Year }}
                     </time>
