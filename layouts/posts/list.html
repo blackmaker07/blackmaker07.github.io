@@ -18,29 +18,46 @@
     <article class="p7-bg p7-border position-relative mb-4">
         <div class="row">
             <div class="col-12 col-md-4">
-                {{ $featured := (.Resources.ByType "image").GetMatch "*jpg*" }}
-                {{ with $featured }}
-                {{ $featured := .Resize "205x webp q100" }}
-                <img src="{{ $featured.RelPermalink }}" alt="{{ $.Params.idescription }}"
-                    class="img-fluid w-100 mb-4 mb-md-0 rounded-3">
+
+                {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
+                {{ $isFirstImage := true }}
+                {{ with $image }}
+                  <div class="img-container">
+                    <img 
+                      src="{{ (.Resize "320x webp").RelPermalink }}"
+                      srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
+                              {{ (.Resize "480x webp").RelPermalink }} 480w,
+                              {{ (.Resize "700x webp").RelPermalink }} 700w"
+                      sizes="(max-width: 320px) 320w,
+                             (max-width: 480px) 480w,
+                             700px"
+                      width="{{ .Width }}"
+                      height="{{ .Height }}"
+                      alt="{{ $.Params.idescription }}"
+                      class="img-fluid mb-4 rounded-3"
+                      {{ if $isFirstImage }}
+                        fetchpriority="high"
+                      {{ else }}
+                        loading="lazy"
+                      {{ end }}
+                    >
+                  </div>
+                  {{ $isFirstImage = false }}
                 {{ end }}
+
             </div>
             <div class="col-12 col-md-8">
-                <h2 class="h4 mb-0">
+                <h2 class="h4 mb-2">
                     <a href="{{ .RelPermalink }}" class="text-decoration-none stretched-link">
-                        {{ .LinkTitle | truncate 100 }}
+                        {{ .LinkTitle | truncate 100 | plainify }}
                     </a>
                 </h2>
                 <div class="small mb-2">
-                    <address class="author d-inline">Von
-                        <i class="bi bi-person-fill"></i>
-                        {{ .Params.author }} am </address><time itemprop="datePublished" datetime="{{ .Date  }}">{{ .Date.Day }}.{{ index
-                        site.Data.months_german (printf "%d"
-                        .Date.Month) }} {{ .Date.Year }}
-                    </time>
+                    <p class="mb-0 d-inline text-secondary">Von {{ .Params.author }} am </p>
+                        {{ partial "time.html" . }}
                 </div>
-                </p>{{ .Summary | truncate 200 | plainify }}
-                <p>
+                {{ .Summary | truncate 200 | plainify }}
+                
             </div>
         </div>
     </article>

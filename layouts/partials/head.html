@@ -16,7 +16,7 @@
 {{ template "_internal/opengraph.html" . }}
 
 <!-- Robots -->
-<meta name="robots" content="index,follow, max-image-preview:large">
+<meta name="robots" content="index,follow">
 
 <!-- Title -->
 <title>{{ .Title }} | {{ .Site.Title }}</title>
@@ -24,14 +24,7 @@
 
 <!-- Preloads -->
 <link rel="preload" href="/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/lato-v24-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/lato-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/lato-v24-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="/fonts/open-sans-v40-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/open-sans-v40-latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/open-sans-v40-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="/fonts/open-sans-v40-latin-800.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-
-{{ partial "head/js.html" . }}
 {{ partial "head/css.html" . }}
+{{ partial "head/js.html" . }}

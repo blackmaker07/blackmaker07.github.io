@@ -1,12 +1,12 @@
 {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
 {{- with resources.Get "sass/main.scss" | toCSS $options }}
   {{- if eq hugo.Environment "development" }}
-    <link rel="preload" href="{{ .RelPermalink }}" as="style">
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    <link rel="preload" href="{{ .RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ .RelPermalink }}"></noscript>
   {{- else }}
     {{- with . | minify | fingerprint }}
-      <link rel="preload" href="{{ .RelPermalink }}" as="style">
-      <link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css" media="all">
+      <link rel="preload" href="{{ .RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ .RelPermalink }}" type="text/css" media="all"></noscript>
     {{- end }}
   {{- end }}
 {{- end }}

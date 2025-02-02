@@ -1,0 +1,5 @@
+<p class="mb-0 d-inline text-secondary">
+    <time itemprop="datePublished" datetime='{{ .Date  }}'>
+            {{ .Date.Day }}. {{ index site.Data.months_german (printf "%d" .Date.Month) }} {{ .Date.Year }}
+    </time>
+</p>

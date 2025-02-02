@@ -1,89 +1,104 @@
 {{ define "main" }}
 
-  <section id="post-single">
-        <article class="p7-bg">
-          <header>
-            <h1>{{ .Title }}</h1>
+<section id="post-single">
+  <article class="p7-bg">
+    <header>
+      <h1>{{ .Title }}</h1>
 
 
-            <div class="d-flex flex-column small mb-3">
+      <div class="d-flex flex-column mb-3 small text-secondary">
 
-            <div>
-              <address class="author d-inline">Von {{ .Params.author }} am </address><time itemprop="datePublished" datetime='{{ .Date  }}'>{{ .Date.Day }}. {{ index
-                site.Data.months_german (printf "%d"
-                .Date.Month) }} {{ .Date.Year }}</time>
-            </div>
+        <div>
+          <p class="mb-0 d-inline">Von {{ .Params.author }} am </p>
+          {{ partial "time.html" . }}
+        </div>
 
-            <div>
-              {{ printf "Geschätzte Lesezeit: %d Minuten" .ReadingTime }}
-            </div>
+        <div>
+          {{ printf "Geschätzte Lesezeit: %d Minuten" .ReadingTime }}
+        </div>
 
-          </div>
-  
-            {{ $featured := (.Resources.ByType "image").GetMatch "*jpg*" }}
-            {{ with $featured }}
-            {{ $featured := .Resize "811x608 webp q100" }}
-            <img src="{{ $featured.RelPermalink }}" alt="{{ $.Params.idescription }}" class="img-fluid mb-4 rounded-3">
-            {{ end }}
+      </div>
+      {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
+      {{ with $image }}
+        <div class="img-container">
+          <img 
+            src="{{ (.Resize "1200x webp").RelPermalink }}"
+            srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
+                    {{ (.Resize "480x webp").RelPermalink }} 480w,
+                    {{ (.Resize "800x webp").RelPermalink }} 800w,
+                    {{ (.Resize "1200x webp").RelPermalink }} 1200w"
+            sizes="(max-width: 320px) 320w,
+                   (max-width: 480px) 480w,
+                   (max-width: 800px) 800w,
+                   100vw"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            alt="{{ $.Params.idescription }}"
+            class="img-fluid mb-4 rounded-3"
+            loading="lazy"
+            style="max-width: 100%; height: auto;"
+          >
+        </div>
+      {{ end }}
 
+    </header>
 
-          </header>
+    {{ .Content }}
 
-          {{ .Content }}
+    <footer class="border-top mt-3 pt-3 border-secondary border-opacity-25">
+      <div class="d-flex flex-column flex-sm-row justify-content-between">
+        <div class="mb-2 mb-sm-0">
+          {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        </div>
 
-          <footer class="border-top mt-3 pt-3 border-secondary border-opacity-25">
-            <div class="d-flex flex-column flex-sm-row justify-content-between">
-              <div class="mb-2 mb-sm-0">
-                {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-              </div>
+        <div>
+          {{ partial "share-buttons.html" . }}
+        </div>
+      </div>
+    </footer>
 
-              <div>
-                {{ partial "share-buttons.html" . }}
-              </div>
-            </div>
-          </footer>
+  </article>
 
-        </article>
-
-        <!-- Disqus 
+  <!-- Disqus 
         <div id="disqus_thread" class="p7-bg mt-4"></div>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->
 
-      </section>
+</section>
 
 
 
 
-      <div class="d-flex justify-content-center mb-4">
+<div class="d-flex justify-content-center mb-4">
 
-          {{ $pages := .CurrentSection.Pages.ByWeight }}
+  {{ $pages := .CurrentSection.Pages.ByWeight }}
 
-          {{ with $pages.Prev . }}
-          <div>
-          <a href="{{ .RelPermalink }}" class="py-2 px-3 mx-1 rounded-3 text-decoration-none bg-body-tertiary d-inline-block">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-              class="bi bi-chevron-double-left" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-              <path fill-rule="evenodd"
-                d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-            </svg> Zurück</a>
-          </div>
-          {{ end }}
-
-          {{ with $pages.Next . }}
-          <div>
-          <a href="{{ .RelPermalink }}" class="py-2 px-3 mx-1 rounded-3 text-decoration-none bg-body-tertiary d-inline-block">Vorwärts
-             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-              class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
-              <path fill-rule="evenodd"
-                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
-            </svg></a>
-          </div>
-          {{ end }}
-        </div>
-
+  {{ with $pages.Prev . }}
+  <div>
+    <a href="{{ .RelPermalink }}" class="py-2 px-3 mx-1 rounded-3 text-decoration-none bg-body-tertiary d-inline-block">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+        class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+        <path fill-rule="evenodd"
+          d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+      </svg> Zurück</a>
+  </div>
   {{ end }}
+
+  {{ with $pages.Next . }}
+  <div>
+    <a href="{{ .RelPermalink }}"
+      class="py-2 px-3 mx-1 rounded-3 text-decoration-none bg-body-tertiary d-inline-block">Vorwärts
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+        class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+        <path fill-rule="evenodd"
+          d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+      </svg></a>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}

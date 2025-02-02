@@ -72,11 +72,12 @@ section p:last-child {
 }
 
 
+
+
 // search
 
 .search-container {
   margin: 20px 0;
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -86,7 +87,6 @@ section p:last-child {
 
 
 .clear-button {
-
   display: none;
 }
 
@@ -106,14 +106,9 @@ section p:last-child {
 
 .search-result h3 {
   margin: 0 0 5px 0;
-  font-size: 18px;
 }
 
-.search-result h3 a {
-  color: $primary;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+
 
 .search-result h3 a:hover {
   color: #0056b3;
@@ -121,11 +116,19 @@ section p:last-child {
 
 .search-result p {
   margin: 0;
-  font-size: 14px;
-  color: #666;
 }
 
 .no-results {
   color: #999;
   text-align: center;
 }
+
+
+
+
+
+
+
+
+
+

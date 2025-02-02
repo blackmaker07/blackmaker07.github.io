@@ -9,10 +9,7 @@
     <ul class="nav flex-column">
         {{ range first 5 (where site.RegularPages "Type" "posts") }}
         <li class="nav-item position-relative">
-            <time itemprop="datePublished" datetime='{{ .Date  }}'><span class="small text-secondary"> {{ .Date.Day
-                    }}. {{ index
-                    site.Data.months_german (printf "%d"
-                    .Date.Month) }} {{ .Date.Year }}</span></time>
+            <span class="text-secondary small">{{ partial "time.html" . }}</span>
             <a class="nav-link p-0 d-inline stretched-link" href="{{ .RelPermalink }}">- {{ .Title | truncate 65
                 }}</a>
         </li>

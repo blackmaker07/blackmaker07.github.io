@@ -7,11 +7,15 @@
         {{ .Content }}
     </div>
 
-    {{ range .Pages.ByTitle }}
+    {{ $paginator := .Paginate .Pages.ByDate.Reverse 5 }}
+    {{ range $paginator.Pages }}
     <div class="p7-bg mb-4">
+        {{ partial "time.html" . }}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     </div>
     {{ end }}
+
+    {{ partial "pagination.html" . }}
 </section>
 
 {{ end }}
