@@ -28,14 +28,14 @@ Wir verstehen, dass die Nutzung von Suchmaschinen oft mit der Preisgabe von Date
 
 Bitte nehmen Sie sich die Zeit, diese Datenschutzerklärung zu lesen, um zu verstehen, wie wir Ihre Daten schützen und verarbeiten. Wenn Sie Fragen haben oder Anliegen bezüglich Ihrer Daten vorbringen möchten, können Sie uns jederzeit kontaktieren.
 
-### Kontaktaufnahme
+## Kontaktaufnahme
 
 Wenn Sie per E-Mail Kontakt mit uns aufnehmen, werden Ihre dort
 angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von
 Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir
 nicht ohne Ihre Einwilligung weiter.
 
-### Kontakformular
+## Kontakformular
 
 Sie können uns über unser Kontaktformular kontaktieren. Für die Nutzung
 unseres Kontaktformulars ist die Angabe der als Pflichtfelder
@@ -70,7 +70,7 @@ aufnehmen möchten, ohne diesen Drittanbieter zu nutzen, senden Sie uns
 bitte eine Nachricht per E-Mail an info@sitename.at
 
 
-### Cookies
+## Cookies
 
 Unsere Website verwendet „Cookies“, um unser Angebot nutzerfreundlicher,
 effektiver und sicherer zu gestalten. Ein „Cookie“ ist eine kleine
@@ -85,7 +85,7 @@ Personenbeziehbarkeit mehr auf den Nutzer zulässt. Der Hauptzweck eines
 Cookies ist die Erkennung der Besucher der Website.
 
 
-### Zwei Arten von Cookies werden auf dieser Website verwendet:
+## Zwei Arten von Cookies werden auf dieser Website verwendet:
 
 - Session Cookies: Das sind temporäre Cookies, die bis zum Verlassen
 unserer Website in der Cookie-Datei Ihres Browsers verweilen und nach
@@ -95,14 +95,14 @@ Ende Ihres Besuchs automatisch gelöscht werden.
 Cookies auf Ihrem Endgerät gespeichert und erlauben es uns, Ihren
 Browser beim nächsten Besuch wiederzuerkennen.
 
-### Mit wem wir Ihre Daten teilen
+## Mit wem wir Ihre Daten teilen
 
 Ihre Daten werden nicht an Dritte weitergegeben. Sofern Ihre Anfrage per
 E-Mail an uns übermittelt wird, ist unser E-Mail Provider als
 Auftragsverarbeiter eingebunden. Mit diesem haben wir einen Vertrag zur
 Auftragsdatenverarbeitung abgeschlossen.
 
-### Ihre Rechte
+## Ihre Rechte
 Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Diese können Sie geltend machen, in dem Sie Ihr Begehren an uns richten, und zwar per E-Mail oder postalisch an die weiter oben auf dieser Seite angeführten Adressen. Es ist jedenfalls zum Nachweis der Identität die Kopie des Reisepasses oder Personalausweises (oder eines sonstigen amtlichen Lichtbildausweises) und eine Kopie des Meldezettels (zur Sicherstellung, dass die Beantwortung Ihres Begehrens auch tatsächlich an Sie persönlich gesandt wird) dem Schreiben beizulegen. Wir werden Ihre Anfrage innerhalb der vom Gesetz eingeräumten Frist von einem Monat ab Einlangen beantworten. Eine Fristverlängerung um zwei Monate ist zulässig; wäre diese von Nöten, würden wir Sie umgehend darüber informieren.  
 
 Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind und wir diesen Umstand durch die Beantwortung Ihrer Anfrage nicht hinreichend klären konnten, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde (www.dsb.gv.at).

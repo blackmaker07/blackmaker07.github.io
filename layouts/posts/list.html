@@ -13,7 +13,6 @@
 {{ $pages := where site.RegularPages "Type" "posts" }}
 {{ $paginator := .Paginate $pages }}
 
-<section id="blog-post-list">
     {{ range $paginator.Pages }}
     <article class="p7-bg p7-border position-relative mb-4">
         <div class="row">
@@ -25,11 +24,11 @@
                   <div class="img-container">
                     <img 
                       src="{{ (.Resize "320x webp").RelPermalink }}"
-                      srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
-                              {{ (.Resize "480x webp").RelPermalink }} 480w,
-                              {{ (.Resize "700x webp").RelPermalink }} 700w"
-                      sizes="(max-width: 320px) 320w,
-                             (max-width: 480px) 480w,
+                      srcset="{{ (.Resize "320x webp").RelPermalink }} 320px,
+                              {{ (.Resize "480x webp").RelPermalink }} 480px,
+                              {{ (.Resize "700x webp").RelPermalink }} 700px"
+                      sizes="(max-width: 320px) 320px,
+                             (max-width: 480px) 480px,
                              700px"
                       width="{{ .Width }}"
                       height="{{ .Height }}"
@@ -62,7 +61,6 @@
         </div>
     </article>
     {{ end }}
-</section>
 
 {{ partial "pagination.html" . }}
 
