@@ -20,7 +20,7 @@
   {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
     {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "nav-link active" "aria-current" "page") }}
+      {{- $attrs = merge $attrs (dict "class" "nav-link active disabled" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
       {{- $attrs = merge $attrs (dict "class" "nav-link ancestor" "aria-current" "true") }}
     {{- else }}

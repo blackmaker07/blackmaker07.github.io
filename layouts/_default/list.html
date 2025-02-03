@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <section id="default-list">
-    <div class="p7-bg mb-4">
+    <div class="tw-bg mb-4">
         <h1>{{ .Title }}</h1>
         {{ .Params.Description }}
         {{ .Content }}
@@ -9,7 +9,7 @@
 
     {{ $paginator := .Paginate .Pages.ByDate.Reverse 5 }}
     {{ range $paginator.Pages }}
-    <div class="p7-bg mb-4">
+    <div class="tw-bg mb-4">
         {{ partial "time.html" . }}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     </div>

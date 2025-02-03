@@ -37,12 +37,12 @@
     <div id="search-results"></div>
 
       <div class="row g-md-3">
-        <div class="{{ if .Params.aside }}col-12 col-lg-8{{ else }}col-12{{ end }}">
+        <div class="{{ if .Params.aside }}col-12 col-md-8{{ else }}col-12{{ end }}">
           {{ block "main" . }}{{ end }}
         </div>
 
         {{ if .Params.aside }}
-        <aside class="col-12 col-lg-4">
+        <aside class="col-12 col-md-4">
           {{ partial "aside.html" . }}
         </aside>
         {{ else }}
@@ -51,7 +51,7 @@
       </div>
   </main>
 
-  <footer>
+  <footer data-bs-theme="dark" class="bg-dark text-bg-dark">
     {{ partial "footer.html" . }}
   </footer>
 

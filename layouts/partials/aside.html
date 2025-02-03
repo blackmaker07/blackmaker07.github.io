@@ -1,15 +1,17 @@
-<section id="aside-author" class="p7-bg">
+<!-- Author -->
+<section id="aside-author" class="tw-bg">
     <h3>Autor</h3>
     <p>Christoph, ein überzeugter Verfechter der Meinungsfreiheit, nutzt seinen Blog, um seine Gedanken
         und Überzeugungen mit der Welt zu teilen.</p>
 </section>
 
-<section id="neuste-beitraege" class="p7-bg">
+<!-- Neueste Artikel  -->
+<section id="neuste-beitraege" class="tw-bg">
     <h3>Neuste Beiträge</h3>
     <ul class="nav flex-column">
         {{ range first 5 (where site.RegularPages "Type" "posts") }}
         <li class="nav-item position-relative">
-            <div class="text-secondary small d-inline">{{ partial "time.html" . }}&nbsp;</div>
+            <p class="text-secondary small mb-2 d-inline">{{ partial "time.html" . }}&nbsp;</p>
             <a class="nav-link p-0 d-inline stretched-link" href="{{ .RelPermalink }}">- {{ .Title | truncate 65
                 }}</a>
         </li>
@@ -17,7 +19,8 @@
     </ul>
 </section>
 
-<section id="kategorien" class="p7-bg">
+<!-- Kategorien -->
+<section id="kategorien" class="tw-bg">
     <h3>Kategorien</h3>
     <ul class="nav flex-column">
         {{ range sort .Site.Taxonomies.categories }}
@@ -28,11 +31,9 @@
     </ul>    
 </section>
 
-
-
-<section id="beitraege-nach-tags" class="p7-bg">
+<!-- Artikel nach Tags -->
+<section id="beitraege-nach-tags" class="tw-bg">
     <h3>Beiträge nach Tags</h3>
-
       <div class="tags-list">
         <ul class="list-unstyled d-inline">
             {{ range $name, $taxonomy := .Site.Taxonomies.tags }} {{ $cnt := .Count }}
@@ -44,5 +45,4 @@
               {{ end }}
         </ul>
       </div>
-
 </section>

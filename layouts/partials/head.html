@@ -4,7 +4,6 @@
 <meta name="author" content="{{if .Params.author}}{{.Params.author}}{{else}}{{ .Site.Params.author }}{{end}}">
 <meta name="keywords" content="{{ if .Params.Keywords }}{{ delimit .Params.Keywords ", " }}{{ end }}">
 
-
 <!-- Fav Icon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -12,7 +11,6 @@
 <link rel="manifest" href="/images/favicon/site.webmanifest">
 
 <!-- Social -->
-
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
 
@@ -21,7 +19,6 @@
 
 <!-- Title -->
 <title>{{ .Title }} | {{ .Site.Title }}</title>
-
 
 <!-- Preloads -->
 <link rel="preload" href="/fonts/lato-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">

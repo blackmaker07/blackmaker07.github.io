@@ -1,68 +1,12 @@
-  
-  
-  /* open-sans-italic - latin */
-   @font-face {
-    font-display: swap; 
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/open-sans-v40-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* open-sans-600 - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url('/fonts/open-sans-v40-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* open-sans-800 - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: url('/fonts/open-sans-v40-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-  /* lato-italic - latin */
-  @font-face {
-    font-display: swap; 
-    font-family: 'Lato';
-    font-style: italic;
-    font-weight: 400;
-    src: url('/fonts/lato-v24-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-
-  /* lato-700 - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* lato-900 - latin */
-@font-face {
-  font-display: swap;
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 900;
-  src: url('/fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
+@import "fonts.scss";
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$prefix: "p7-";
+$prefix: "tw-";
 
 $primary: #006797;
-$secondary: #5f5f5f;
-$warning: #ffa801;
-$body-tertiary-bg: #f0f0f0;
 
 $headings-font-family: "Lato", serif;
 $font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -71,11 +15,6 @@ $badge-font-size: 0.8rem;
 $badge-padding-y: .45em;
 $badge-padding-x: .75em;
 
-/*
-$primary: #5f27cd;
-$body-bg-dark: #191919;
-$body-tertiary-bg-dark: #141414;
-*/
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "node_modules/bootstrap/scss/variables";
@@ -83,7 +22,6 @@ $body-tertiary-bg-dark: #141414;
 
 // 4. Include any default map overrides here
 $badge-font-weight: $font-weight-normal;
-$headings-margin-bottom: $spacer * .6;
 
 // 5. Include remainder of required parts
 @import "node_modules/bootstrap/scss/maps";
@@ -133,5 +71,4 @@ $headings-margin-bottom: $spacer * .6;
 @import "node_modules/bootstrap/scss/utilities/api";
 
 // 8. Add additional custom code here
-
 @import "styles.scss";

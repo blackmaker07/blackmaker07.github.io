@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<section id="blog-introduction" class="p7-bg">
+<!-- Blog Introduction -->
+<section id="blog-introduction" class="tw-bg">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     <p>
@@ -10,52 +11,41 @@
     </p>
 </section>
 
+<!-- Article + Paginator Range -->
 {{ $pages := where site.RegularPages "Type" "posts" }}
 {{ $paginator := .Paginate $pages }}
 
-    {{ range $paginator.Pages }}
-    <article class="p7-bg p7-border position-relative mb-4">
-        <div class="row">
-            <div
-             class="col-12 col-md-4">
-
-             {{ $images := (.Resources.ByType "image").Match "*small*.jpg" }}
-             {{ range $index, $image := $images }}
-             <div class="img-container">
-               <picture>
-                 <source srcset="{{ ($image.Resize "471x353 webp").RelPermalink }}" type="image/webp">
-                 <source srcset="{{ ($image.Resize "471x353 jpg").RelPermalink }}" type="image/jpeg">
-                 <img 
-                   src="{{ ($image.Resize "471x353 jpg").RelPermalink }}"
-                   width="314"
-                   height="235"
-                   alt="{{ $.Params.idescription }}"
-                   class="img-fluid w-100 mb-4 rounded-3"
-                   {{ if eq $index 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
-                   decoding="async"
-                 >
-               </picture>
-             </div>
-             {{ end }}
-
-            </div>
-            <div class="col-12 col-md-8">
-                <h2 class="h4 mb-2">
-                    <a href="{{ .RelPermalink }}" class="text-decoration-none stretched-link">
-                        {{ .LinkTitle | truncate 100 | plainify }}
-                    </a>
-                </h2>
-                <div class="small mb-2">
-                    <p class="mb-0 d-inline text-secondary">Von {{ .Params.author }} am&nbsp;</p>
-                        {{ partial "time.html" . }}
-                </div>
-                {{ .Summary | truncate 200 | plainify }}
-                
-            </div>
+{{ range $paginator.Pages }}
+<article class="tw-bg position-relative mb-4">
+    <div class="row">
+        <!-- Picture -->
+        <div class="col-12 col-md-4">
+            {{ $images := (.Resources.ByType "image").Match "*small*.jpg" }}
+            {{ range $index, $image := $images }}
+                <picture>
+                    <source srcset="{{ ($image.Resize " 471x353 webp").RelPermalink }}" type="image/webp">
+                    <source srcset="{{ ($image.Resize " 471x353 jpg").RelPermalink }}" type="image/jpeg">
+                    <img src="{{ ($image.Resize " 471x353 jpg").RelPermalink }}" width="314" height="235"
+                        alt="{{ $.Params.idescription }}" class="img-fluid w-100 mb-4 rounded-3" {{ if eq $index 0
+                        }}fetchpriority="high" {{ else }}loading="lazy" {{ end }} decoding="async">
+                </picture>
+            {{ end }}
         </div>
-    </article>
-    {{ end }}
+        <!-- Title + Content  -->
+        <section class="col-12 col-md-8">
+            <h2 class="h4 mb-2">
+                <a href="{{ .RelPermalink }}" class="text-decoration-none stretched-link">
+                    {{ .LinkTitle | truncate 100 | plainify }}
+                </a>
+            </h2>
+            <p class="text-secondary small mb-2">Von&nbsp;{{ .Params.author }}&nbsp;am&nbsp;{{ partial "time.html" . }}</p>
+            <p class="mb-0">{{ .Summary | truncate 200 | plainify }}</p>
+        </section>
+    </div>
+</article>
+{{ end }}
 
+<!-- Pagination -->
 {{ partial "pagination.html" . }}
 
 {{ end }}

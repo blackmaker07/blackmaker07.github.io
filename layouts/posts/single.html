@@ -1,77 +1,77 @@
 {{ define "main" }}
 
+<!-- Article Single Post-->
+<article class="tw-bg mb-4">
+  <!-- Article header -->
+  <header id="single-post-header">
+    <!-- Title -->
+    <h1>{{ .Title }}</h1>
 
-  <article class="p7-bg mb-4">
-    <header>
-      <h1>{{ .Title }}</h1>
+    <!-- Author + Published Time -->
+    <div class="d-flex flex-column mb-3 text-secondary small">
+      <p class="mb-1">Von&nbsp;{{ .Params.author }}&nbsp;am&nbsp;{{ partial "time.html" . }}</p>
+      <p class="mb-2">{{ printf "Geschätzte Lesezeit: %d Minuten" .ReadingTime }}</p>
+    </div>
+  </header>
 
-
-      <div class="d-flex flex-column mb-3 small text-secondary">
-
-        <div>
-          <p class="mb-0 d-inline">Von {{ .Params.author }} am&nbsp;</p>
-          {{ partial "time.html" . }}
-        </div>
-
-        <div>
-          {{ printf "Geschätzte Lesezeit: %d Minuten" .ReadingTime }}
-        </div>
-
-      </div>
-{{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
-{{ with $image }}
-  <div class="img-container">
-    <img 
-      src="{{ (.Resize "811x608 webp").RelPermalink }}"
-      srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
-              {{ (.Resize "480x webp").RelPermalink }} 480w,
-              {{ (.Resize "608x webp").RelPermalink }} 608w,
-              {{ (.Resize "811x webp").RelPermalink }} 811w"
-      sizes="(max-width: 320px) 320px,
-             (max-width: 480px) 480px,
-             (max-width: 608px) 608px,
-             100vw"
-      width="{{ .Width }}"
-      height="{{ .Height }}"
-      alt="{{ $.Params.idescription }}"
-      class="img-fluid mb-4 rounded-3"
-      fetchpriority="high"
-      style="max-width: 100%; height: auto;"
-    >
+  <!-- Picture -->
+  <div id="single-post-picture">
+    {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
+    {{ with $image }}
+    <picture>
+      <source srcset="{{ (.Resize " 320x webp").RelPermalink }} 320w, {{ (.Resize "480x webp" ).RelPermalink }} 480w, {{
+        (.Resize "608x webp" ).RelPermalink }} 608w, {{ (.Resize "811x webp" ).RelPermalink }} 811w" sizes="(max-width: 320px) 320px,
+           (max-width: 480px) 480px,
+           (max-width: 608px) 608px,
+           100vw" type="image/webp">
+      <img src="{{ (.Resize " 811x608 jpg").RelPermalink }}" srcset="{{ (.Resize " 320x jpg").RelPermalink }} 320w, {{
+        (.Resize "480x jpg" ).RelPermalink }} 480w, {{ (.Resize "608x jpg" ).RelPermalink }} 608w, {{
+        (.Resize "811x jpg" ).RelPermalink }} 811w" sizes="(max-width: 320px) 320px,
+           (max-width: 480px) 480px,
+           (max-width: 608px) 608px,
+           100vw" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Params.idescription }}"
+        class="img-fluid mb-4 rounded-3" loading="eager" fetchpriority="high" style="max-width: 100%; height: auto;">
+    </picture>
+    {{ end }}
   </div>
-{{ end }}
 
-    </header>
 
-    {{ .Content }}
+  <!-- Article Body -->
+  <section id="single-post-content" class="mb-0">
+  {{ .Content }}
+  </section>
 
-    <footer class="border-top mt-3 pt-3 border-secondary border-opacity-25">
-      <div class="d-flex flex-column flex-sm-row justify-content-between">
-        <div class="mb-2 mb-sm-0">
+  <!-- Article Footer -->
+  <footer id="single-post-footer" class="border-top mt-3 pt-3 border-secondary border-opacity-25">
+    <div class="d-flex flex-column flex-md-row justify-content-between p-0 m-0">
+      <div class="mb-2 mb-md-0">
+        <p class="mb-0">
           {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-        </div>
-
-        <div>
-          {{ partial "share-buttons.html" . }}
-        </div>
+        </p>
       </div>
-    </footer>
+  
+      <div>
+        {{ partial "share-buttons.html" . }}
+      </div>
+    </div>
+  </footer>
 
-  </article>
+</article>
 
-  <!-- Disqus 
-        <div id="disqus_thread" class="p7-bg mt-4"></div>
+<!-- Disqus 
+<div id="disqus_thread" class="tw-bg mt-4"></div>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 -->
 
 
 
-
+<!-- Article Single Post Pagination-->
 
 <div class="d-flex justify-content-center mb-4">
 
   {{ $pages := .CurrentSection.Pages.ByWeight }}
 
+  <!-- Nächster Eintrag -->
   {{ with $pages.Prev . }}
   <div>
     <a href="{{ .RelPermalink }}" class="py-2 px-3 mx-1 rounded-3 text-decoration-none bg-body-tertiary d-inline-block">
@@ -85,6 +85,7 @@
   </div>
   {{ end }}
 
+  <!-- Eintrag Zurück -->
   {{ with $pages.Next . }}
   <div>
     <a href="{{ .RelPermalink }}"
