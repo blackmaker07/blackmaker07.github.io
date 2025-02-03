@@ -17,7 +17,6 @@
     <article class="p7-bg p7-border position-relative mb-4">
         <div class="row">
             <div class="col-12 col-md-4">
-
                 {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
                 {{ $isFirstImage := true }}
                 {{ with $image }}
@@ -27,8 +26,8 @@
                       srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
                               {{ (.Resize "480x webp").RelPermalink }} 480w,
                               {{ (.Resize "700x webp").RelPermalink }} 700w"
-                      sizes="(max-width: 320px) 320w,
-                             (max-width: 480px) 480w,
+                      sizes="(max-width: 320px) 320px,
+                             (max-width: 480px) 480px,
                              700px"
                       width="{{ .Width }}"
                       height="{{ .Height }}"
