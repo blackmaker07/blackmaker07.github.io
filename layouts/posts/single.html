@@ -18,28 +18,28 @@
         </div>
 
       </div>
-      {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
-      {{ with $image }}
-        <div class="img-container">
-          <img 
-            src="{{ (.Resize "1200x webp").RelPermalink }}"
-            srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
-                    {{ (.Resize "480x webp").RelPermalink }} 480w,
-                    {{ (.Resize "800x webp").RelPermalink }} 800w,
-                    {{ (.Resize "1200x webp").RelPermalink }} 1200w"
-            sizes="(max-width: 320px) 320px,
-                   (max-width: 480px) 480px,
-                   (max-width: 800px) 800px,
-                   100vw"
-            width="{{ .Width }}"
-            height="{{ .Height }}"
-            alt="{{ $.Params.idescription }}"
-            class="img-fluid mb-4 rounded-3"
-            fetchpriority="high"
-            style="max-width: 100%; height: auto;"
-          >
-        </div>
-      {{ end }}
+{{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
+{{ with $image }}
+  <div class="img-container">
+    <img 
+      src="{{ (.Resize "811x608 webp").RelPermalink }}"
+      srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
+              {{ (.Resize "480x webp").RelPermalink }} 480w,
+              {{ (.Resize "608x webp").RelPermalink }} 608w,
+              {{ (.Resize "811x webp").RelPermalink }} 811w"
+      sizes="(max-width: 320px) 320px,
+             (max-width: 480px) 480px,
+             (max-width: 608px) 608px,
+             100vw"
+      width="{{ .Width }}"
+      height="{{ .Height }}"
+      alt="{{ $.Params.idescription }}"
+      class="img-fluid mb-4 rounded-3"
+      fetchpriority="high"
+      style="max-width: 100%; height: auto;"
+    >
+  </div>
+{{ end }}
 
     </header>
 
