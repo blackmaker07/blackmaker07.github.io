@@ -16,32 +16,27 @@
     {{ range $paginator.Pages }}
     <article class="p7-bg p7-border position-relative mb-4">
         <div class="row">
-            <div class="col-12 col-md-4">
-                {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
-                {{ $isFirstImage := true }}
-                {{ with $image }}
-                  <div class="img-container">
-                    <img 
-                      src="{{ (.Resize "320x webp").RelPermalink }}"
-                      srcset="{{ (.Resize "320x webp").RelPermalink }} 320w,
-                              {{ (.Resize "480x webp").RelPermalink }} 480w,
-                              {{ (.Resize "700x webp").RelPermalink }} 700w"
-                      sizes="(max-width: 320px) 320px,
-                             (max-width: 480px) 480px,
-                             700px"
-                      width="{{ .Width }}"
-                      height="{{ .Height }}"
-                      alt="{{ $.Params.idescription }}"
-                      class="img-fluid mb-4 rounded-3"
-                      {{ if $isFirstImage }}
-                        fetchpriority="high"
-                      {{ else }}
-                        loading="lazy"
-                      {{ end }}
-                    >
-                  </div>
-                  {{ $isFirstImage = false }}
-                {{ end }}
+            <div
+             class="col-12 col-md-4">
+
+             {{ $images := (.Resources.ByType "image").Match "*small*.jpg" }}
+             {{ range $index, $image := $images }}
+             <div class="img-container">
+               <picture>
+                 <source srcset="{{ ($image.Resize "314x235 webp").RelPermalink }}" type="image/webp">
+                 <source srcset="{{ ($image.Resize "314x235 jpg").RelPermalink }}" type="image/jpeg">
+                 <img 
+                   src="{{ ($image.Resize "314x235 jpg").RelPermalink }}"
+                   width="314"
+                   height="235"
+                   alt="{{ $.Params.idescription }}"
+                   class="img-fluid mb-4 rounded-3"
+                   {{ if eq $index 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+                   decoding="async"
+                 >
+               </picture>
+             </div>
+             {{ end }}
 
             </div>
             <div class="col-12 col-md-8">
