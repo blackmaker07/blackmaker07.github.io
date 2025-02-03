@@ -40,6 +40,7 @@
                 // Change <h1> to <p> with class .h1
                 const heading = document.createElement('p');
                 heading.className = 'h1 alert alert-warning text-center'; // Center the heading text
+                heading.id = 'results-heading'; // New ID for scrolling reference
                 heading.textContent = `Suchergebnisse (${Math.min((currentPage * itemsPerPage) + 1, results.length)} - ${Math.min((currentPage + 1) * itemsPerPage, results.length)} von ${results.length} für "${searchTerm}")`;
                 searchResults.appendChild(heading);
     
@@ -63,7 +64,7 @@
     
                 if (currentPage > 0) {
                     const prevButton = document.createElement('button');
-                    prevButton.className = 'btn btn-secondary mr-2'; // Add right margin
+                    prevButton.className = 'btn btn-secondary me-2'; // Add right margin
                     prevButton.textContent = 'Zurück';
                     prevButton.onclick = () => {
                         currentPage--;
@@ -74,17 +75,19 @@
     
                 if (end < results.length) {
                     const nextButton = document.createElement('button');
-                    nextButton.className = 'btn btn-primary mx-2'; // Add horizontal margins
+                    nextButton.className = 'btn btn-primary me-2'; // Add horizontal margins
                     nextButton.textContent = 'Mehr laden';
                     nextButton.onclick = () => {
                         currentPage++;
                         updateSearchResults(results, searchTerm);
+                        // Scroll to the heading after loading more results
+                        document.getElementById('results-heading').scrollIntoView({ behavior: 'smooth' });
                     };
                     navigation.appendChild(nextButton);
                 }
     
                 const cancelButton = document.createElement('button');
-                cancelButton.className = 'btn btn-danger ml-2'; // Add left margin
+                cancelButton.className = 'btn btn-danger'; // Add left margin
                 cancelButton.textContent = 'Suche abbrechen';
                 cancelButton.onclick = () => {
                     searchInput.value = '';
