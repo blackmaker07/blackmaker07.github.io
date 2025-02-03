@@ -1,60 +1,105 @@
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const searchInput = document.getElementById('search-input');
         const searchResults = document.getElementById('search-results');
-        const clearButton = document.getElementById('clear-search');
         const pages = [
             {{ range .Site.RegularPages }}
                 { title: "{{ .Title }}", content: "{{ .Plain | htmlUnescape }}", url: "{{ .RelPermalink }}" },
             {{ end }}
         ];
     
+        let currentPage = 0;
+        const itemsPerPage = 5;
+    
         // Event listener for search input
-        searchInput.addEventListener('input', function() {
+        searchInput.addEventListener('input', function () {
             const searchTerm = this.value.toLowerCase();
             let results = [];
     
-            // Suche beginnt erst ab 3 Buchstaben
+            // Search starts from 3 characters
             if (searchTerm.length >= 3) {
-                results = pages.filter(page => 
+                results = pages.filter(page =>
                     page.title.toLowerCase().includes(searchTerm)
                 );
                 if (results.length === 0) {
-                    results = pages.filter(page => 
+                    results = pages.filter(page =>
                         page.content.toLowerCase().includes(searchTerm)
                     );
                 }
             }
     
-            updateSearchResults(results);
+            currentPage = 0; // Reset page when new search is performed
+            updateSearchResults(results, searchTerm);
         });
     
-
-    
         // Function to update search results
-        function updateSearchResults(results) {
+        function updateSearchResults(results, searchTerm) {
             searchResults.innerHTML = '';  // Clear previous results
-            
+    
             if (results.length > 0) {
-                const heading = document.createElement('h2');
-                heading.textContent = "Suchergebnisse";
+                // Change <h1> to <p> with class .h1
+                const heading = document.createElement('p');
+                heading.className = 'h1 alert alert-warning text-center'; // Center the heading text
+                heading.textContent = `Suchergebnisse (${Math.min((currentPage * itemsPerPage) + 1, results.length)} - ${Math.min((currentPage + 1) * itemsPerPage, results.length)} von ${results.length} für "${searchTerm}")`;
                 searchResults.appendChild(heading);
     
-                results.forEach(result => {
+                const start = currentPage * itemsPerPage;
+                const end = start + itemsPerPage;
+                const paginatedResults = results.slice(start, end);
+    
+                paginatedResults.forEach(result => {
                     const resultElement = document.createElement('div');
                     resultElement.className = 'search-result';
                     resultElement.innerHTML = `
-                        <h3><a class="stretched-link" href="${result.url}">${result.title}</a></h3>
+                        <p class="h3"><a class="stretched-link" href="${result.url}">${result.title}</a></p>
                         <p>${result.content.substring(0, 150)}...</p>
                     `;
                     searchResults.appendChild(resultElement);
                 });
+    
+                // Navigation buttons with Bootstrap styling, centered and with spacing
+                const navigation = document.createElement('div');
+                navigation.className = 'btn-group d-flex justify-content-center mt-3'; // Center buttons and add top margin
+    
+                if (currentPage > 0) {
+                    const prevButton = document.createElement('button');
+                    prevButton.className = 'btn btn-secondary mr-2'; // Add right margin
+                    prevButton.textContent = 'Zurück';
+                    prevButton.onclick = () => {
+                        currentPage--;
+                        updateSearchResults(results, searchTerm);
+                    };
+                    navigation.appendChild(prevButton);
+                }
+    
+                if (end < results.length) {
+                    const nextButton = document.createElement('button');
+                    nextButton.className = 'btn btn-primary mx-2'; // Add horizontal margins
+                    nextButton.textContent = 'Mehr laden';
+                    nextButton.onclick = () => {
+                        currentPage++;
+                        updateSearchResults(results, searchTerm);
+                    };
+                    navigation.appendChild(nextButton);
+                }
+    
+                const cancelButton = document.createElement('button');
+                cancelButton.className = 'btn btn-danger ml-2'; // Add left margin
+                cancelButton.textContent = 'Suche abbrechen';
+                cancelButton.onclick = () => {
+                    searchInput.value = '';
+                    searchResults.innerHTML = '';
+                };
+                navigation.appendChild(cancelButton);
+    
+                searchResults.appendChild(navigation);
+    
+                // Add "Suchergebnisse Ende" at the bottom with the same style as the header
+                const endNotice = document.createElement('p');
+                endNotice.className = 'h1 alert alert-warning text-center mt-3';
+                endNotice.textContent = 'Suchergebnisse Ende';
+                searchResults.appendChild(endNotice);
             }
         }
-        
-        // Show or hide clear button based on input
-        searchInput.addEventListener('keyup', function() {
-            clearButton.style.display = this.value ? 'block' : 'none';
-        });
     });
-</script>
+    </script>
