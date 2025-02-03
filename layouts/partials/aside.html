@@ -9,7 +9,7 @@
     <ul class="nav flex-column">
         {{ range first 5 (where site.RegularPages "Type" "posts") }}
         <li class="nav-item position-relative">
-            <div class="text-secondary small d-inline">{{ partial "time.html" . }}</div>
+            <div class="text-secondary small d-inline">{{ partial "time.html" . }}&nbsp;</div>
             <a class="nav-link p-0 d-inline stretched-link" href="{{ .RelPermalink }}">- {{ .Title | truncate 65
                 }}</a>
         </li>

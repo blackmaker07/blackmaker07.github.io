@@ -30,7 +30,7 @@
                    width="314"
                    height="235"
                    alt="{{ $.Params.idescription }}"
-                   class="img-fluid mb-4 rounded-3"
+                   class="img-fluid w-100 mb-4 rounded-3"
                    {{ if eq $index 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
                    decoding="async"
                  >
@@ -46,7 +46,7 @@
                     </a>
                 </h2>
                 <div class="small mb-2">
-                    <p class="mb-0 d-inline text-secondary">Von {{ .Params.author }} am </p>
+                    <p class="mb-0 d-inline text-secondary">Von {{ .Params.author }} am&nbsp;</p>
                         {{ partial "time.html" . }}
                 </div>
                 {{ .Summary | truncate 200 | plainify }}
