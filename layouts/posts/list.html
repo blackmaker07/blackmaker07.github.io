@@ -23,10 +23,10 @@
              {{ range $index, $image := $images }}
              <div class="img-container">
                <picture>
-                 <source srcset="{{ ($image.Resize "314x235 webp").RelPermalink }}" type="image/webp">
-                 <source srcset="{{ ($image.Resize "314x235 jpg").RelPermalink }}" type="image/jpeg">
+                 <source srcset="{{ ($image.Resize "471x353 webp").RelPermalink }}" type="image/webp">
+                 <source srcset="{{ ($image.Resize "471x353 jpg").RelPermalink }}" type="image/jpeg">
                  <img 
-                   src="{{ ($image.Resize "314x235 jpg").RelPermalink }}"
+                   src="{{ ($image.Resize "471x353 jpg").RelPermalink }}"
                    width="314"
                    height="235"
                    alt="{{ $.Params.idescription }}"
