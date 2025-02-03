@@ -14,9 +14,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-0 pe-md-3 mb-3 mb-md-0">
-                    <li class="nav-item">
                         {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-                    </li>
                 </ul>
                 <ul class="navbar-nav flex-row justify-content-center justify-content-md-end flex-grow-1 pe-0 pe-md-3">
                     <li class="nav-item">
@@ -44,7 +42,7 @@
                     </li>
                 </ul>
                 <form class="d-flex mt-3 mt-md-0 d-none d-md-block" role="search">
-                    <input id="search-input" class="form-control" type="search" placeholder="Search" maxlength="20" value="" aria-label="Search" placeholder="Webseite durchsuchen">
+                    <input id="search-input" class="form-control" type="search" maxlength="20" value="" aria-label="Search" placeholder="Webseite durchsuchen">
                 </form>
             </div>
         </div>

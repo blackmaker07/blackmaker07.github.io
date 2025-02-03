@@ -10,8 +10,8 @@
     {{ $paginator := .Paginate .Pages.ByDate.Reverse 5 }}
     {{ range $paginator.Pages }}
     <div class="tw-bg mb-4">
-        {{ partial "time.html" . }}
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <h2 class="mb-1"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <p class="mb-0 small text-secondary">Von&nbsp;{{ .Params.author }}&nbsp;am&nbsp;{{ partial "time.html" . }}</p>
     </div>
     {{ end }}
 

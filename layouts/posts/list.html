@@ -32,7 +32,7 @@
             {{ end }}
         </div>
         <!-- Title + Content  -->
-        <section class="col-12 col-md-8">
+        <div class="col-12 col-md-8">
             <h2 class="h4 mb-2">
                 <a href="{{ .RelPermalink }}" class="text-decoration-none stretched-link">
                     {{ .LinkTitle | truncate 100 | plainify }}
@@ -40,7 +40,7 @@
             </h2>
             <p class="text-secondary small mb-2">Von&nbsp;{{ .Params.author }}&nbsp;am&nbsp;{{ partial "time.html" . }}</p>
             <p class="mb-0">{{ .Summary | truncate 200 | plainify }}</p>
-        </section>
+        </div>
     </div>
 </article>
 {{ end }}
