@@ -11,8 +11,8 @@ Diese Seite wurde gemäß den Bestimmungen des österreichischen Mediengesetzes 
 
 ## Medieninhaber, Betreiber der Website und für den Inhalt verantwortlich
 
-- TrueWords.at
-- Österreich
+- Christoph Bachmayer
+- Österreich / Wien
 - [lacaine@proton.me](mailto:lacaine@proton.me)  
 
 ## Inhalt des Onlineangebotes
