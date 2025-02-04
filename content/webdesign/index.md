@@ -3,7 +3,7 @@ title = 'Statische Webseiten: Die sichere und performante Wahl für Ihre Online-
 description = "Entdecken Sie, warum statische Webseiten die bessere Wahl für Sicherheit, Performance und SEO sind, und wie moderne CMS-Lösungen diese weiter verbessern."
 date = 2025-01-27T19:35:36+01:00
 keywords = ['Statische Webseiten', 'Sicherheit', 'Performance', 'Skalierbarkeit', 'Dynamische Webseiten', 'WordPress', 'Sicherheitsrisiken', 'Komplexität', 'usecue CMS', 'CMS für statische Seiten', 'SEO-Vorteile', 'SEO-Ranking', 'Minimalistisches Design', 'Weniger Wartung', 'Entscheidungshilfe', 'Webseitengröße', 'Thema', 'Ziele']
-draft = false
+draft = true
 layout = 'webdesign'
 +++
 

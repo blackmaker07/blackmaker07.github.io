@@ -36,6 +36,22 @@ angegebenen Daten zwecks Bearbeitung der Anfrage und für den Fall von
 Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir
 nicht ohne Ihre Einwilligung weiter.
 
+## Google AdSense
+
+- **Zweck:** Google AdSense verwendet Cookies, um Ihre Interessen und Aktivitäten auf verschiedenen Websites zu verfolgen. Dies hilft dabei, Ihnen personalisierte Werbung zu zeigen, die auf Ihren vorherigen Interaktionen im Internet basiert.
+
+- **Datenverarbeitung:** Die Cookies sammeln Informationen wie Ihre IP-Adresse, Browsertyp, besuchte Seiten und Klickverhalten. Diese Daten werden verwendet, um relevante Anzeigen zu präsentieren und die Leistung der Werbung zu analysieren.
+
+- **Rechtsgrundlage:** Die Verarbeitung erfolgt auf Basis Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Ohne Ihre ausdrückliche Zustimmung werden keine personalisierten Werbeanzeigen angezeigt.
+
+- **Speicherdauer:** Die meisten AdSense-Cookies haben eine Lebensdauer von 18 Monaten, können jedoch je nach Zweck variieren.
+
+- **Drittanbieter:** Die erfassten Daten können an Google und eventuell an weitere Partner weitergegeben werden, um die Werbung zu optimieren.
+
+- **Widerspruchsrecht:** Sie können jederzeit Ihre Einwilligung widerrufen oder Cookies blockieren, indem Sie die Einstellungen Ihres Browsers ändern oder Tools wie den Google Ads Settings verwenden.
+
+- **Übermittlung in Drittländer:** Daten können in die USA übertragen werden, wo Google seinen Hauptsitz hat. Google hat sich dem EU-US-Privacy-Shield-Framework angeschlossen, um ein angemessenes Datenschutzniveau zu gewährleisten.
+
 ## Kontakformular
 
 Sie können uns über unser Kontaktformular kontaktieren. Für die Nutzung

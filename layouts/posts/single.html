@@ -16,7 +16,7 @@
 
   <!-- Picture -->
   <div id="single-post-picture">
-    {{ $image := (.Resources.ByType "image").GetMatch "*jpg" }}
+    {{ $image := (.Resources.ByType "image").GetMatch "*large*.jpg" }}
     {{ with $image }}
     <picture>
       <source srcset="{{ (.Resize " 320x webp").RelPermalink }} 320w, {{ (.Resize "480x webp" ).RelPermalink }} 480w, {{
