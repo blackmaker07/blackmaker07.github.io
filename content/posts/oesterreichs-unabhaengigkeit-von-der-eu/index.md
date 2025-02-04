@@ -8,7 +8,7 @@ tags = ["Politik", "Österreich", "Europa"]
 keywords = ['EU-Austritt Österreich','Österreichische Unabhängigkeit', 'Wirtschaftliche Lage Österreich', 'Handel Österreich', 'Bilaterale Abkommen Österreich', 'Souveränität Österreich', 'Geografische Lage Österreich']
 idescription = 'Bild mit strahlender Österreich- und verdunkelter EU Fahne'
 author = 'Christoph'
-images = ['oesterreich-fahne-und-eu-fahne.jpg']
+images = ['oesterreich-fahne-und-eu-fahne-large.jpg']
 aside = true
 +++
 

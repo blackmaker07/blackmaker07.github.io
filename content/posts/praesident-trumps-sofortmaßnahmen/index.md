@@ -8,7 +8,7 @@ tags = ['USA', 'Österreich']
 keywords = ['Donald Trump', 'USA', 'Präsidentschaft 2025', 'Grenzsicherung', 'Wirtschaftsförderung', 'Deregulierung', 'Meinungs- und Pressefreiheit', 'Gesundheitspolitik', 'Österreich', 'Politik', 'Einwanderung', 'Sicherheit', 'Demokratie' ]
 idescription = 'Donald Trump mit erhobener Faust und der Vereinigten Staaten Flagge'
 author = 'Christoph'
-images = ['trump-mit-flagge-der-vereinigten-staaten-usa-fight.jpg']
+images = ['trump-mit-flagge-der-vereinigten-staaten-usa-fight-large.jpg']
 aside = true
 +++
 

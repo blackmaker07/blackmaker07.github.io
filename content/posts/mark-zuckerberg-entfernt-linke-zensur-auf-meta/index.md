@@ -8,7 +8,7 @@ tags = ["Politik", "International", "Medien"]
 keywords = ['Zensur','Mark Zuckerberg', 'Mark', 'Zuckerberg', 'Facebook', 'Meinungsfreiheit', 'Instagram', 'META',]
 idescription = 'Mark Zuckerberg mit dunklen Zensurgestalten im Hintergrund'
 author = 'Christoph'
-images = ['mark-zuckerberg-reguliert-zensur-auf-facebook-neu.jpg']
+images = ['mark-zuckerberg-reguliert-zensur-auf-facebook-neu-large.jpg']
 aside = true
 +++
 

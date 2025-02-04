@@ -8,7 +8,7 @@ tags = ['Europa', 'Politik', 'International']
 keywords = ['WHO', 'Italien', 'USA', 'Austritt WHO', 'Korruption', 'Domino-Effekt', 'Gesundheitspolitik', 'Völkergesundheit', 'Reform WHO']
 idescription = 'Das WHO-Logo auf einer Erdkugel, die von einer düsteren und dunklen Atmosphäre umgeben ist.'
 author = 'Christoph'
-images = ['who-logo-mit-duesterer-erdkugel.jpg']
+images = ['who-logo-mit-duesterer-erdkugel-large.jpg']
 aside = true
 +++
 

@@ -7,7 +7,7 @@ categories = ['Österreichische Politik' ]
 tags = ['Politik', 'Österreich']
 keywords = ['ÖVP', 'FPÖ', 'Regierungsverhandlungen', 'Bankenabgabe', 'Christian Stocker', 'Transparenz', 'Österreichische Politik', 'Wahlsieger', 'Koalition']
 idescription = 'Herbert Kickl im Gespräch vor Bankgebäuden in Österreich.'
-images = ['herbert-kickl-vor-bank-gebaeude.jpg']
+images = ['herbert-kickl-vor-bank-gebaeude-large.jpg']
 author = 'Christoph'
 aside = true
 +++

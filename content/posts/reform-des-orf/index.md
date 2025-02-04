@@ -8,7 +8,7 @@ tags = ["Österreich", "Medien"]
 keywords = ['ORF Reform', 'Rundfunkgebühren', 'Privatisation ORF', 'öffentlich-rechtlicher Rundfunk', 'ORF Gehälter', 'ORF Moderatoren', 'Medienvielfalt', 'Österreichischer Rundfunk Kritik', 'Zukunftsmedienkonzepte']
 idescription = 'Wütende österreichische Bürger umzingeln mit Fackeln den politisch gelenkten ORF'
 author = 'Christoph'
-images = ['wuetende-buerger-umzingeln-den-orf.jpg']
+images = ['wuetende-buerger-umzingeln-den-orf-large.jpg']
 aside = true
 +++
 

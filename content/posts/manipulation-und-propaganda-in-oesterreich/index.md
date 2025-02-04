@@ -9,7 +9,7 @@ tags = ["Politik", "Österreich", "Medien"]
 keywords = ['ORF', 'Österreich Medien', 'Medienkritik', 'Woke', 'Agenda', 'Berichterstattung', 'Öffentlich-rechtlicher Rundfunk', 'Medienmanipulation', 'Demokratie', 'Meinungsvielfalt']
 idescription = 'Comic-Art von Wien mit ORF-Logo: Eine humorvolle Darstellung der Wiener Skyline in lebhaften Farben, mit dem ikonischen ORF-Logo prominent in der Mitte. Perfekt für Fans von Wien und österreichischem Fernsehen.'
 author = 'Christoph'
-images = ['comic-wien-orf-logo.jpg']
+images = ['comic-wien-orf-logo-large.jpg']
 aside = true
 +++
 

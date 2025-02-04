@@ -7,7 +7,7 @@ categories = ['Österreichische Politik']
 tags = ["Österreich", "Medien"]
 keywords = ['Österreich','Politik', 'Kickl', 'Herbert', 'Herbert Kickl', 'Meinungsfreiheit', 'Kanzler']
 idescription = 'Herbert Kickl als Portrait'
-images = ['herbert-kickl-als-retter-oesterreichs.jpg']
+images = ['herbert-kickl-als-retter-oesterreichs-large.jpg']
 author = 'Christoph'
 aside = true
 +++

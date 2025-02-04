@@ -8,7 +8,7 @@ tags = ["Politik", "Österreich"]
 keywords = ['Michael Ludwig', 'Wien Wahl 2025', 'Budget', 'Budget Defizit', 'Stadt Wien', 'Wien Defizit', 'Schulden Wien', 'Wien Wahlmanipulation', 'Wien Zukunft', 'Wahlentscheidung Wien', 'Michael Ludwig Kritik']
 idescription = 'Stephansdom bei Nacht mit idyllischer Schnee Atmossphäre'
 author = 'Christoph'
-images = ['stadt-wien-mit-schnee-umgebung.jpg']
+images = ['stadt-wien-mit-schnee-umgebung-large.jpg']
 aside = true
 +++
 

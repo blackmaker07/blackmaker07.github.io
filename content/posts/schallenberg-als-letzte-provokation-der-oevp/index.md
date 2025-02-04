@@ -8,7 +8,7 @@ tags = ["Politik", "Österreich"]
 keywords = ['Alexander Schallenberg','ÖVP', 'Impfgegner', 'Provokation', 'Impfpflicht', 'Kritik', 'Pandemie', 'Österreichische Politik', 'Polarisierung', 'Gesellschaftliche Spaltung', 'Corona' ]
 idescription = 'Alexander Schallenberg umzingelt von Bevölkerung die seine Corona Politik ablehnen'
 author = 'Christoph'
-images = ['alexander-schallenberg-corona-virus-maßnahmen.jpg']
+images = ['alexander-schallenberg-corona-virus-maßnahmen-large.jpg']
 aside = true
 +++
 
