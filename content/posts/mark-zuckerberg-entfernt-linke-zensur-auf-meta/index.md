@@ -30,5 +30,3 @@ Die Zeit wird zeigen, wie sich diese Änderungen in der Praxis auswirken. Wird d
 
 ## Schlussgedanke:
 Meinungsfreiheit ist ein zentrales Element jeder Demokratie, aber die Balance zwischen freier Rede und dem Schutz vor schädlichen Inhalten bleibt eine der größten Herausforderungen unserer Zeit. Zuckerbergs Entscheidung könnte ein wichtiger Schritt in Richtung einer offenen, aber verantwortungsbewussten digitalen Diskurskultur sein.
-
-Dieser Blog-Eintrag basiert auf den aktuellen Entwicklungen und öffentlichen Aussagen von Mark Zuckerberg und Meta. Die Zukunft wird zeigen, wie dieser Kurswechsel die Landschaft der sozialen Medien verändert.

@@ -45,5 +45,3 @@ Ein neues Konzept für den ORF müsste sich an den Grundprinzipien eines öffent
 - **Kultur:** Förderung des kulturellen Lebens in Österreich, mit besonderem Fokus auf regionale Vielfalt.
 
 Der ORF steht an einem Wendepunkt. Durch eine Reform der Gebühren, eine Überarbeitung der Gehaltsstrukturen und eine Neuausrichtung der inhaltlichen Ausrichtung könnte der ORF wieder zu einer Institution werden, die das Vertrauen der Bevölkerung genießt. Es ist an den Entscheidungsträgern, diese notwendigen Schritte zu gehen, um den österreichischen Rundfunk für die Zukunft fit zu machen.
-
-**Hinweis: Dieser Artikel reflektiert die Ansichten des Autors**
