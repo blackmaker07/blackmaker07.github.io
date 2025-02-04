@@ -1,5 +1,5 @@
 +++
-title = 'Blogger und Webdesigner aus Wien'
+title = 'TrueWords.at - Ihr Webdesigner aus Wien für Kreativität, Perfektion, Leidenschaft und digitale Kunst | Webdesign & Blog'
 description = 'Blogger und Webdesigner: Entdecken Sie kreative Webdesigns und persönliche Blogeinträge aus Wien.'
 date = 2023-01-01T08:00:00-07:00
 draft = false

@@ -4,6 +4,7 @@ description = 'Erfahren Sie, wie wir Ihre Daten gemäß DSGVO und österreichisc
 date = 2024-12-25T08:30:00-07:00
 draft = false
 keywords = ["Datenschutz", "DSGVO", "österreichisches Mediengesetz", "persönliche Daten"]
+aside = true
 +++
 
 Der Schutz Ihrer persönlichen Daten ist uns sehr wichtig. Diese Datenschutzerklärung informiert Sie darüber, wie wir Ihre Daten im Einklang mit den Bestimmungen des österreichischen Mediengesetzes und der Datenschutz-Grundverordnung (DSGVO) verarbeiten und schützen.

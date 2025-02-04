@@ -79,9 +79,7 @@
                     nextButton.textContent = 'Mehr laden';
                     nextButton.onclick = () => {
                         currentPage++;
-                        updateSearchResults(results, searchTerm);
-                        // Scroll to the heading after loading more results
-                        document.getElementById('results-heading').scrollIntoView({ behavior: 'smooth' });
+                        updateSearchResults(results, searchTerm);       
                     };
                     navigation.appendChild(nextButton);
                 }
