@@ -1,6 +1,6 @@
 <div id="consent-notice" class="bg-dark p-3 w-100 text-light text-center">
     <span>Wir möchten <a class="manage-consent link-light" href="#manage-consent">Cookies</a> verwenden. Erfahren Sie mehr unter <a href="/datenschutz" class="link-light">Datenschutz</a>. </span>
-            <div class="px-4 d-inline">
+            <div class="px-0 px-md-4 d-inline">
     <button class="btn manage-consent btn-primary">
                 Verwalten</button>
             <button class="btn deny-consent btn-danger">Verweigern</button>
@@ -19,8 +19,9 @@
             </div>
         {{ end }}
         <div>
-            <button id="save-consent" class="btn save-consent btn-primary" data-consentvalue="{{ range $index, $item := .Site.Data.consent.items }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}">Einstellungen Speichern</button>
+            <button id="save-consent" class="btn save-consent btn-primary" data-consentvalue="{{ range $index, $item := .Site.Data.consent.items }}{{ if $item.is_functional}}{{ else }}0{{ end }}{{ end }}">Auswahl Speichern</button>
             <button class="btn approve-consent btn-success">Alle Zulassen</button>
+            
         </div>
     </div>
 </div>

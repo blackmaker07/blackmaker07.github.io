@@ -1,5 +1,5 @@
 items:
   - title: Google Adsense
-    description: Google AdSense ist ein Werbeprogramm, das es Website-Betreibern ermöglicht, durch die Platzierung von Werbeanzeigen Einnahmen zu erzielen. Diese Anzeigen basieren auf den Interessen und dem Verhalten der Besucher, um relevante Werbung zu präsentieren. Dazu werden Cookies verwendet, um Daten zu sammeln, die für die Personalisierung und Optimierung der Anzeigen notwendig sind. Ihre Einwilligung ist erforderlich, um diese Cookies zu setzen und Ihre Daten zu nutzen.
+    description: Google AdSense ist ein Werbeprogramm, das es Website-Betreibern ermöglicht, durch die Platzierung von Werbeanzeigen Einnahmen zu erzielen.
     is_functional: false
     script_file: adsense.js
