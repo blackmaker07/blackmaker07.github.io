@@ -8,6 +8,7 @@ tags = ['Philosophie', 'Stoizismus']
 keywords = ['Stoizismus', 'Alleinsein', 'Selbstentwicklung', 'mentale Gesundheit', 'Philosophie', 'Reflexion', 'Seneca']
 idescription = ''
 author = 'Christoph'
+images = ['stoiker-im-sitzen-bei-roemischen-ambiente-large.jpg']
 aside = true
 +++
 
