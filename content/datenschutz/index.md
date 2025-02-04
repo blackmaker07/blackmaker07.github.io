@@ -103,7 +103,7 @@ Informationen und Opt-Out-Möglichkeiten finden Sie in der
 Datenschutzerklärung von Formspree.io:
 https://formspree.io/legal/privacy-policy/. Wenn Sie mit uns Kontakt
 aufnehmen möchten, ohne diesen Drittanbieter zu nutzen, senden Sie uns
-bitte eine Nachricht per E-Mail an info@sitename.at
+bitte eine Nachricht per E-Mail an [lacaine@proton.me](mailto:lacaine@proton.me) 
 
 ## Google AdSense
 
