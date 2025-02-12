@@ -6,7 +6,8 @@ draft = false
 categories = ['Österreichische Politik']
 tags = ['Österreich', 'Politik']
 keywords = ['Österreich', 'politische Krise', 'ÖVP', 'FPÖ', 'Herbert Kickl', 'Demokratie', 'Machtspiele', 'Medienmanipulation', 'Wahlmanipulation', 'Regierungskoalition']
-idescription = ''
+idescription = 'Österreichischer Fahnenmast auf der Spitze eines Bergdorfes.'
+images = ['oesterreich-flagge-mit-alpen-panorama-large.jpg']
 author = 'Christoph'
 aside = true
 +++
